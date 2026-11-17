@@ -8,11 +8,16 @@ import { scoreLevelTest, scoreTrackQuiz } from '../../server/src/services/scorin
 export const DEMO_ADMIN = { email: 'admin@masar.test', password: 'admin1234' };
 export const DEMO_STUDENT = { email: 'omar@example.com', password: 'student123' };
 
+// No-login demo (VITE_DEMO_GUEST=1): one visitor, already signed in, with no
+// other students. They have done the track quiz and level test so every page has content.
+export const GUEST_MODE = Boolean(import.meta.env.VITE_DEMO_GUEST);
+export const DEMO_GUEST = { email: 'visitor@masar.demo', password: 'visitor-demo' };
+
 const DAY = 24 * 60 * 60 * 1000;
 const STAGES = ['registered', 'quiz', 'level', 'plan', 'submitted', 'revision', 'approved'];
 
 // name, email, how far they got, aimed track, how well they do in the level test (0–1), days since last visit
-const STUDENTS = [
+const ALL_STUDENTS = [
   ['عمر خالد', 'omar@example.com', 'approved', 'frontend', 0.6, 0],
   ['مريم حسن', 'mariam@example.com', 'submitted', 'uiux', 0.4, 0],
   ['يوسف إبراهيم', 'youssef@example.com', 'plan', 'backend', 0.75, 2],
@@ -24,6 +29,7 @@ const STUDENTS = [
   ['ليلى سامي', 'laila@example.com', 'revision', 'backend', 0.45, 2],
   ['زياد وليد', 'ziad@example.com', 'registered', null, 0, 0],
 ];
+const STUDENTS = GUEST_MODE ? [['زائر', DEMO_GUEST.email, 'plan', 'frontend', 0.6, 0]] : ALL_STUDENTS;
 
 const iso = (ms) => new Date(ms).toISOString();
 
@@ -82,9 +88,9 @@ export function seedDemo() {
       id: userId,
       name,
       email,
-      password: 'student123',
+      password: GUEST_MODE ? DEMO_GUEST.password : 'student123',
       role: 'student',
-      university: 'جامعة الإسكندرية',
+      university: GUEST_MODE ? '' : 'جامعة الإسكندرية',
       academicYear: ['الأولى', 'الثانية', 'الثالثة', 'الرابعة'][n % 4],
       recommendedTrack: null,
       chosenTrack: null,

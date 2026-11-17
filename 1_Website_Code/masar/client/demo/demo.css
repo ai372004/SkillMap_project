@@ -112,3 +112,9 @@
     display: none;
   }
 }
+
+/* No-login demo: no account or sign-out links. */
+html[data-demo-guest] .topbar__nav a[href='#/account'],
+html[data-demo-guest] .topbar__nav .link-button {
+  display: none;
+}

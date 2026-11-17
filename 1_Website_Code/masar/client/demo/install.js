@@ -12,3 +12,23 @@ window.fetch = async (input, init = {}) => {
   await pause();
   return handle((init.method || 'GET').toUpperCase(), url.slice(at + 4), new Headers(init.headers), init.body);
 };
+
+// No-login demo (VITE_DEMO_GUEST=1): the visitor is signed in before the app
+// starts, and the sign-in, account and supervisor screens are skipped.
+if (import.meta.env.VITE_DEMO_GUEST) {
+  const { guestToken } = await import('./server.js');
+  const { DEMO_GUEST } = await import('./seed.js');
+  try {
+    localStorage.setItem('masar.token', guestToken(DEMO_GUEST.email));
+  } catch {
+    /* storage blocked: the app shows the sign-in screen instead */
+  }
+  document.documentElement.dataset.demoGuest = '';
+  const HIDDEN = ['/login', '/register', '/account', '/admin'];
+  const skipHidden = () => {
+    const path = location.hash.replace(/^#/, '').split('?')[0];
+    if (HIDDEN.includes(path)) location.replace('#/dashboard');
+  };
+  skipHidden();
+  window.addEventListener('hashchange', skipHidden);
+}

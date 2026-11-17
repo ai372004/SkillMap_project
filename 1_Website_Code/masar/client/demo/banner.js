@@ -1,7 +1,7 @@
 // A small "demo version" note in the corner: what this copy is, the demo
 // accounts, and a button to start over. Plain DOM, so it stays out of the app.
 import { resetDemo } from './server.js';
-import { DEMO_ADMIN, DEMO_STUDENT } from './seed.js';
+import { DEMO_ADMIN, DEMO_STUDENT, GUEST_MODE } from './seed.js';
 
 const TEXT = {
   ar: {
@@ -76,8 +76,7 @@ export function mountDemoBanner() {
       { className: 'demo-note__panel', hidden: !open },
       el('p', { className: 'demo-note__title', textContent: t.title }),
       el('p', { textContent: t.body }),
-      account(t.admin, DEMO_ADMIN),
-      account(t.student, DEMO_STUDENT),
+      ...(GUEST_MODE ? [] : [account(t.admin, DEMO_ADMIN), account(t.student, DEMO_STUDENT)]),
       reset
     );
     root.replaceChildren(panel, pill);

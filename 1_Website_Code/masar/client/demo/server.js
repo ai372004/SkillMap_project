@@ -21,7 +21,8 @@ import { planSummary } from '../../server/src/services/plan.js';
 import { toCsv } from '../../server/src/utils/csv.js';
 import { seedDemo } from './seed.js';
 
-const STORAGE_KEY = `masar.demo.db${import.meta.env.VITE_DEMO_TRACKS ? `.${import.meta.env.VITE_DEMO_TRACKS}` : ''}`;
+const VARIANT = [import.meta.env.VITE_DEMO_TRACKS, import.meta.env.VITE_DEMO_GUEST && 'guest'].filter(Boolean).join('.');
+const STORAGE_KEY = `masar.demo.db${VARIANT ? `.${VARIANT}` : ''}`;
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 const SEEN_EVERY_MS = 60 * 60 * 1000;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -87,6 +88,12 @@ function publicUser(u) {
 }
 const withoutAnswers = ({ answers: _a, ...rest }) => rest;
 const tokenFor = (u) => `demo.${u.id}.${u.tokenVersion}`;
+
+/** Session token of the built-in visitor, for the no-login demo (VITE_DEMO_GUEST). */
+export function guestToken(email) {
+  const user = load().users.find((u) => u.email === email);
+  return user ? tokenFor(user) : null;
+}
 
 function withReasons(result) {
   if (!result) return null;
