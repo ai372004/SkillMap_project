@@ -30,7 +30,7 @@ function singleFile() {
     enforce: 'post',
     transformIndexHtml(html) {
       const theme = readFileSync(here('./public/theme-init.js'), 'utf8');
-      const icon = `data:image/svg+xml;base64,${readFileSync(here('./public/favicon.svg')).toString('base64')}`;
+      const icon = `data:image/png;base64,${readFileSync(here('./public/favicon.png')).toString('base64')}`;
       return html.replace('/*THEME_INIT*/', theme.trim()).replace('/*FAVICON*/', icon);
     },
     generateBundle(_options, bundle) {

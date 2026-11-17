@@ -2,7 +2,7 @@
 // tasks, plans) comes from the API already in both languages.
 export const dict = {
   ar: {
-    brand: 'مسار',
+    brand: 'skillmap',
     nav: {
       dashboard: 'رحلتي',
       plan: 'خطة التطوير',
@@ -29,7 +29,7 @@ export const dict = {
       open: 'فتح الرابط',
       ar: 'عربي',
       en: 'English',
-      footer: 'مسار: منصة توجيه الطلاب إلى المسارات التقنية.',
+      footer: 'skillmap: منصة توجيه الطلاب إلى المسارات التقنية.',
       offline: 'لا يوجد اتصال بالإنترنت. ستعمل الصفحة من جديد عند عودة الاتصال.',
     },
     levels: { beginner: 'مبتدئ', intermediate: 'متوسط', advanced: 'متقدم' },
@@ -343,7 +343,7 @@ export const dict = {
   },
 
   en: {
-    brand: 'Masar',
+    brand: 'skillmap',
     nav: {
       dashboard: 'My journey',
       plan: 'Plan',
@@ -370,7 +370,7 @@ export const dict = {
       open: 'Open link',
       ar: 'Arabic',
       en: 'English',
-      footer: 'Masar: guiding students to the right tech track.',
+      footer: 'skillmap: guiding students to the right tech track.',
       offline: 'You are offline. The page will work again once the connection is back.',
     },
     levels: { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' },

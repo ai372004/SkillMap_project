@@ -1,3 +1,4 @@
+import logoUrl from '../assets/skillmap-logo.png';
 import { Fragment } from 'react';
 import { useLang } from '../i18n/LanguageContext.jsx';
 
@@ -5,11 +6,10 @@ export function Logo() {
   const { t } = useLang();
   return (
     <span className="logo">
-      <svg className="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M16 27V17M16 17L8 6M16 17L24 6" />
-        <circle cx="16" cy="27" r="3.2" />
-      </svg>
-      <span className="logo__word">{t('brand')}</span>
+      <img className="logo__mark" src={logoUrl} alt="" width="36" height="36" />
+      <span className="logo__word" dir="ltr" aria-label={t('brand')}>
+        skill<span className="logo__word-accent">map</span>
+      </span>
     </span>
   );
 }

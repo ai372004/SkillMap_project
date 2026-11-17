@@ -32,11 +32,11 @@ export function useRouteEffects() {
 
   useEffect(() => {
     const match = TITLE_KEYS.find(([prefix]) => pathname === prefix || pathname.startsWith(prefix + '/'));
-    const brand = lang === 'ar' ? 'مسار' : 'Masar';
+    const brand = 'skillmap';
     document.title = match
       ? `${t(match[1])} | ${brand}`
       : lang === 'ar'
-        ? 'مسار | منصة المسارات التقنية'
-        : 'Masar | Tech track guidance';
+        ? 'skillmap | منصة المسارات التقنية'
+        : 'skillmap | Tech track guidance';
   }, [pathname, lang, t]);
 }

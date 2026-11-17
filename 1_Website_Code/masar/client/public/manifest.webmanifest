@@ -1,12 +1,15 @@
 {
-  "name": "مسار | Masar",
-  "short_name": "مسار",
+  "name": "skillmap",
+  "short_name": "skillmap",
   "description": "منصة تساعد الطلاب على اختيار مسارهم التقني ومعرفة مستواهم والحصول على خطة تطوير ومهام عملية.",
   "lang": "ar",
   "dir": "rtl",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f8f8f8",
-  "theme_color": "#392c7d",
-  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+  "theme_color": "#1d5e50",
+  "icons": [
+    { "src": "/favicon.png", "sizes": "64x64", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
 }
