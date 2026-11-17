@@ -6,10 +6,10 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 const ThemeContext = createContext(null);
 export const THEME_KEY = 'masar.theme';
 
-// Dark mode is switched off for now: the theme button is hidden and every
-// visitor sees light mode. All the dark-mode code and colours stay in place.
-// To bring it back, set this to true and DARK_MODE_ENABLED in public/theme-init.js.
-export const DARK_MODE_ENABLED = false;
+// Dark mode switch. When false, the theme button is hidden and every visitor
+// sees light mode (the dark-mode code and colours stay in place).
+// Keep it in step with DARK_MODE_ENABLED in public/theme-init.js.
+export const DARK_MODE_ENABLED = true;
 
 function readSaved() {
   try {
