@@ -87,7 +87,14 @@
   --ink-hover: #e2e4df;
   --on-track: #1c1d21;
   --backdrop: rgb(0 0 0 / 0.65);
-  --shadow: 0 4px 24px rgb(0 0 0 / 0.4);
+  /* Cards glow softly in olive, like the cards in the reference design:
+     a thin olive ring, a light top edge, an olive halo and a deep shadow. */
+  --shadow:
+    0 0 0 1px rgb(166 180 110 / 0.32), inset 0 1px 0 rgb(185 198 135 / 0.18), 0 0 26px rgb(166 180 110 / 0.2),
+    0 10px 28px rgb(0 0 0 / 0.45);
+  --shadow-hover:
+    0 0 0 1px rgb(166 180 110 / 0.55), inset 0 1px 0 rgb(185 198 135 / 0.26), 0 0 36px rgb(166 180 110 / 0.34),
+    0 12px 32px rgb(0 0 0 / 0.5);
   --hero-bg: #16191d;
   --badge: #d92d4e;
 
@@ -109,6 +116,22 @@
     --track: oklch(from var(--track-base) max(l, 0.74) calc(c * 1.3) h);
   }
 }
+/* Dark mode: every card gets the olive glow, and cards you can act on glow
+   a little more under the pointer. */
+:root[data-theme='dark']
+  :is(.panel, .task, .track-list__item, .counts--big, .runner, .result-hero, .reasons__item, .welcome__steps li) {
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s ease;
+}
+:root[data-theme='dark'] :is(.task, .track-list__item):hover {
+  box-shadow: var(--shadow-hover);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root[data-theme='dark'] :is(.panel, .task, .track-list__item) {
+    transition: none;
+  }
+}
+
 /* In dark mode the Front-end track (the brand green) takes the theme's
    olive, so it matches the buttons instead of turning teal. */
 :root[data-theme='dark'] [style*='--track-base: #1D5E50' i] {
