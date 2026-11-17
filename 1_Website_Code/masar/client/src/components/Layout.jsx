@@ -13,7 +13,7 @@ import { useTheme } from '../theme/ThemeContext.jsx';
 export default function Layout() {
   const { t, toggle, lang } = useLang();
   const { user, ready, logout } = useAuth();
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme, allowDark } = useTheme();
   const themeLabel = theme === 'dark' ? t('nav.toLight') : t('nav.toDark');
   const location = useLocation();
   const navigate = useNavigate();
@@ -94,15 +94,18 @@ export default function Layout() {
                 </NavLink>
               </>
             )}
-            <button
-              type="button"
-              className="theme-toggle"
-              onClick={toggleTheme}
-              aria-label={themeLabel}
-              title={themeLabel}
-            >
-              {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-            </button>
+            {/* Hidden while dark mode is switched off (DARK_MODE_ENABLED in ThemeContext.jsx). */}
+            {allowDark && (
+              <button
+                type="button"
+                className="theme-toggle"
+                onClick={toggleTheme}
+                aria-label={themeLabel}
+                title={themeLabel}
+              >
+                {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+              </button>
+            )}
             <button type="button" className="lang-toggle" onClick={toggle} lang={lang === 'ar' ? 'en' : 'ar'}>
               {t('nav.switchLang')}
             </button>

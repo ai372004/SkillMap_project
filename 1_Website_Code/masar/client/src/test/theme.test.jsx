@@ -22,7 +22,7 @@ describe('ThemeProvider', () => {
 
   it('opens in light mode when nothing is saved, whatever the device setting', () => {
     render(
-      <ThemeProvider>
+      <ThemeProvider allowDark>
         <Probe />
       </ThemeProvider>
     );
@@ -32,7 +32,7 @@ describe('ThemeProvider', () => {
 
   it('saves the choice and applies it to the document', () => {
     render(
-      <ThemeProvider>
+      <ThemeProvider allowDark>
         <Probe />
       </ThemeProvider>
     );
@@ -42,10 +42,20 @@ describe('ThemeProvider', () => {
     expect(document.documentElement.dataset.theme).toBe('dark');
   });
 
+  it('stays light while dark mode is switched off', () => {
+    localStorage.setItem(THEME_KEY, 'dark');
+    render(
+      <ThemeProvider allowDark={false}>
+        <Probe />
+      </ThemeProvider>
+    );
+    expect(screen.getByRole('button')).toHaveTextContent('light');
+  });
+
   it('uses dark mode when the visitor has chosen it', () => {
     localStorage.setItem(THEME_KEY, 'dark');
     render(
-      <ThemeProvider>
+      <ThemeProvider allowDark>
         <Probe />
       </ThemeProvider>
     );

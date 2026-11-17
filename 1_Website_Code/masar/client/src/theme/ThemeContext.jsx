@@ -6,6 +6,11 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 const ThemeContext = createContext(null);
 export const THEME_KEY = 'masar.theme';
 
+// Dark mode is switched off for now: the theme button is hidden and every
+// visitor sees light mode. All the dark-mode code and colours stay in place.
+// To bring it back, set this to true and DARK_MODE_ENABLED in public/theme-init.js.
+export const DARK_MODE_ENABLED = false;
+
 function readSaved() {
   try {
     const saved = localStorage.getItem(THEME_KEY);
@@ -15,8 +20,8 @@ function readSaved() {
   }
 }
 
-export function ThemeProvider({ children }) {
-  const [theme, setChoice] = useState(() => readSaved() || 'light');
+export function ThemeProvider({ children, allowDark = DARK_MODE_ENABLED }) {
+  const [theme, setChoice] = useState(() => (allowDark && readSaved()) || 'light');
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -36,7 +41,7 @@ export function ThemeProvider({ children }) {
 
   const toggleTheme = useCallback(() => setTheme(theme === 'dark' ? 'light' : 'dark'), [theme, setTheme]);
 
-  const value = useMemo(() => ({ theme, setTheme, toggleTheme }), [theme, setTheme, toggleTheme]);
+  const value = useMemo(() => ({ theme, setTheme, toggleTheme, allowDark }), [theme, setTheme, toggleTheme, allowDark]);
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }
 
