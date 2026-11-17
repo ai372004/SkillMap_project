@@ -57,8 +57,9 @@
    falls back to the device setting; index.html sets data-theme before the
    first paint so the page never flashes the wrong colours. */
 :root[data-theme='dark'] {
-  /* Warm dark theme: near-black brown page, warm grey-brown cards, the
-     brand green one shade lighter for buttons, and gold accents. */
+  /* Warm dark theme: near-black brown page, warm grey-brown cards, one
+     light green (#48B99E) for buttons, links and the selected menu item,
+     and gold accents. */
   --bg: #16130f;
   --surface: #39332b;
   --ink: #f3eee6;
@@ -67,12 +68,12 @@
   --rule: #4a4239;
   --rule-strong: #61574b;
   --control: #a89e8e;
-  --primary: #4fb39a;
-  --primary-hover: #6cc6ad;
+  --primary: #48b99e;
+  --primary-hover: #63c6ad;
   --on-primary: #16130f;
-  --fill: #247a65;
-  --fill-hover: #2a8570;
-  --on-fill: #ffffff;
+  --fill: var(--primary);
+  --fill-hover: var(--primary-hover);
+  --on-fill: #16130f;
   --signal: #e0bc5a;
   --focus: #e0bc5a;
   --ok: #6fcf9b;
