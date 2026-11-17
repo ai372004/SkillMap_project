@@ -15,6 +15,10 @@
   --primary: #1d5e50;
   --primary-hover: #164a3f;
   --on-primary: #ffffff;
+  /* Solid buttons and badges. Same as the primary in light mode. */
+  --fill: var(--primary);
+  --fill-hover: var(--primary-hover);
+  --on-fill: #ffffff;
   --signal: #c9a23c;
   --focus: #1f7a64;
   --ok: #0b7a4b;
@@ -53,31 +57,36 @@
    falls back to the device setting; index.html sets data-theme before the
    first paint so the page never flashes the wrong colours. */
 :root[data-theme='dark'] {
-  --bg: #0f1a17;
-  --surface: #16241f;
-  --ink: #e8efeb;
-  --ink-2: #c8d4ce;
-  --muted: #9db0a7;
-  --rule: #24372f;
-  --rule-strong: #355046;
-  --control: #7f948a;
-  --primary: #5cc4a6;
-  --primary-hover: #7dd3ba;
-  --on-primary: #0f1a17;
+  /* Warm dark theme: near-black brown page, warm grey-brown cards, the
+     brand green one shade lighter for buttons, and gold accents. */
+  --bg: #16130f;
+  --surface: #39332b;
+  --ink: #f3eee6;
+  --ink-2: #d9d1c5;
+  --muted: #bdb3a3;
+  --rule: #4a4239;
+  --rule-strong: #61574b;
+  --control: #a89e8e;
+  --primary: #4fb39a;
+  --primary-hover: #6cc6ad;
+  --on-primary: #16130f;
+  --fill: #247a65;
+  --fill-hover: #2a8570;
+  --on-fill: #ffffff;
   --signal: #e0bc5a;
   --focus: #e0bc5a;
-  --ok: #4cc38a;
-  --ok-bg: #12352a;
+  --ok: #6fcf9b;
+  --ok-bg: #1f3a2c;
   --warn: #f0b155;
-  --warn-bg: #3a2a10;
-  --bad: #ff7b72;
-  --bad-bg: #3d1a1a;
-  --on-ink: #0f1a17;
-  --ink-hover: #d3ded8;
-  --on-track: #0f1a17;
+  --warn-bg: #3d2f17;
+  --bad: #ff8a80;
+  --bad-bg: #45231f;
+  --on-ink: #16130f;
+  --ink-hover: #e6dfd4;
+  --on-track: #16130f;
   --backdrop: rgb(0 0 0 / 0.65);
-  --shadow: 0 4px 24px rgb(0 0 0 / 0.35);
-  --hero-bg: #13221d;
+  --shadow: 0 4px 24px rgb(0 0 0 / 0.4);
+  --hero-bg: #2a251f;
   --badge: #d92d4e;
 
   color-scheme: dark;
@@ -302,14 +311,14 @@ code {
 }
 
 .topbar__nav a.nav-cta {
-  background: var(--primary);
-  color: var(--on-primary);
+  background: var(--fill);
+  color: var(--on-fill);
   font-weight: 600;
   border-radius: 999px;
 }
 .topbar__nav a.nav-cta:hover {
-  background: var(--primary-hover);
-  color: var(--on-primary);
+  background: var(--fill-hover);
+  color: var(--on-fill);
 }
 .topbar__nav a.nav-cta.active {
   box-shadow: none;
@@ -446,11 +455,11 @@ code {
 }
 
 .btn--primary {
-  background: var(--primary);
-  color: var(--on-primary);
+  background: var(--fill);
+  color: var(--on-fill);
 }
 .btn--primary:hover:not(:disabled) {
-  background: var(--primary-hover);
+  background: var(--fill-hover);
 }
 
 .btn--ghost {
@@ -2298,8 +2307,8 @@ input[dir='ltr'] {
   inline-size: 32px;
   block-size: 32px;
   border-radius: 50%;
-  background: var(--primary);
-  color: var(--on-primary);
+  background: var(--fill);
+  color: var(--on-fill);
   font-weight: 700;
 }
 .welcome__meta {
@@ -2956,7 +2965,7 @@ input[dir='ltr'] {
   display: block;
   block-size: 100%;
   border-radius: inherit;
-  background: var(--primary);
+  background: var(--fill);
   animation: meter-fill 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 .funnel__count {
