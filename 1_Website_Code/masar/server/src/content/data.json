@@ -1,0 +1,263 @@
+{
+  "track": "data",
+  "levelTest": [
+    {
+      "id": "da1", "difficulty": "easy",
+      "q": { "ar": "ما المتوسط الحسابي للأعداد 2، 4، 6، 8؟", "en": "What is the mean of 2, 4, 6, 8?" },
+      "options": [
+        { "id": "a", "text": { "ar": "4", "en": "4" } },
+        { "id": "b", "text": { "ar": "6", "en": "6" } },
+        { "id": "c", "text": { "ar": "5", "en": "5" } },
+        { "id": "d", "text": { "ar": "20", "en": "20" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "المجموع 20 مقسومًا على 4 قيم = 5.", "en": "The sum 20 divided by 4 values = 5." }
+    },
+    {
+      "id": "da2", "difficulty": "easy",
+      "q": { "ar": "أي مكتبة Python هي الأشهر للتعامل مع الجداول (DataFrames)؟", "en": "Which Python library is best known for working with tables (DataFrames)?" },
+      "options": [
+        { "id": "a", "text": { "ar": "pandas", "en": "pandas" } },
+        { "id": "b", "text": { "ar": "React", "en": "React" } },
+        { "id": "c", "text": { "ar": "Express", "en": "Express" } },
+        { "id": "d", "text": { "ar": "Figma", "en": "Figma" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "pandas توفر DataFrame لقراءة البيانات وتنظيفها وتحليلها.", "en": "pandas provides the DataFrame for reading, cleaning and analysing data." }
+    },
+    {
+      "id": "da3", "difficulty": "easy",
+      "q": { "ar": "أي رسم بياني هو الأنسب لعرض اتجاه قيمة عبر الزمن؟", "en": "Which chart is best for showing a trend over time?" },
+      "options": [
+        { "id": "a", "text": { "ar": "الرسم الدائري", "en": "Pie chart" } },
+        { "id": "b", "text": { "ar": "سحابة الكلمات", "en": "Word cloud" } },
+        { "id": "c", "text": { "ar": "الخريطة", "en": "Map" } },
+        { "id": "d", "text": { "ar": "الرسم الخطي", "en": "Line chart" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "الرسم الخطي يوضح الصعود والهبوط بين النقاط الزمنية المتتالية.", "en": "A line chart shows rises and falls across consecutive points in time." }
+    },
+    {
+      "id": "da4", "difficulty": "easy",
+      "q": { "ar": "ما ملف CSV؟", "en": "What is a CSV file?" },
+      "options": [
+        { "id": "a", "text": { "ar": "صيغة صور مضغوطة تُستخدم في التقارير", "en": "A compressed image format used in reports" } },
+        { "id": "b", "text": { "ar": "جدول في ملف نصي تفصل الفواصل بين قيمه", "en": "A plain-text table whose values are separated by commas" } },
+        { "id": "c", "text": { "ar": "ملف جداول يحفظ المعادلات والتنسيق والرسوم البيانية", "en": "A spreadsheet file that stores formulas, formatting and charts" } },
+        { "id": "d", "text": { "ar": "برنامج Python ينظف البيانات تلقائيًا", "en": "A Python script that cleans data automatically" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "CSV صيغة بسيطة يفتحها Excel وتقرؤها pandas بالدالة `read_csv`.", "en": "CSV is a simple format Excel opens and pandas reads with `read_csv`." }
+    },
+    {
+      "id": "da5", "difficulty": "easy",
+      "q": { "ar": "ماذا يفعل الأمر `SELECT` في SQL؟", "en": "What does `SELECT` do in SQL?" },
+      "options": [
+        { "id": "a", "text": { "ar": "يحذف صفوفًا من جدول", "en": "Deletes rows from a table" } },
+        { "id": "b", "text": { "ar": "ينشئ جدولًا جديدًا", "en": "Creates a new table" } },
+        { "id": "c", "text": { "ar": "يجلب البيانات من جدول", "en": "Retrieves data from a table" } },
+        { "id": "d", "text": { "ar": "يعدّل القيم في جدول", "en": "Changes values in a table" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "مثال: `SELECT name, grade FROM students;`", "en": "Example: `SELECT name, grade FROM students;`" }
+    },
+    {
+      "id": "da6", "difficulty": "medium",
+      "q": { "ar": "ما الوسيط (Median) للقيم 1، 2، 3، 10، 20؟", "en": "What is the median of 1, 2, 3, 10, 20?" },
+      "options": [
+        { "id": "a", "text": { "ar": "7.2", "en": "7.2" } },
+        { "id": "b", "text": { "ar": "3", "en": "3" } },
+        { "id": "c", "text": { "ar": "10", "en": "10" } },
+        { "id": "d", "text": { "ar": "2", "en": "2" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "الوسيط هو القيمة في المنتصف بعد الترتيب = 3، أما المتوسط فهو 7.2.", "en": "The median is the middle value after sorting = 3; the mean is 7.2." }
+    },
+    {
+      "id": "da7", "difficulty": "medium",
+      "q": { "ar": "ماذا يعرض `df.isnull().sum()` في pandas؟", "en": "What does `df.isnull().sum()` show in pandas?" },
+      "options": [
+        { "id": "a", "text": { "ar": "عدد القيم المفقودة في كل عمود", "en": "The number of missing values in each column" } },
+        { "id": "b", "text": { "ar": "مجموع كل القيم في كل عمود", "en": "The sum of all the values in each column" } },
+        { "id": "c", "text": { "ar": "عدد الصفوف في الجدول كله", "en": "The number of rows in the whole table" } },
+        { "id": "d", "text": { "ar": "يحذف القيم المفقودة من الجدول", "en": "It removes the missing values from the table" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "isnull تعطي True مكان كل قيمة مفقودة، و sum تعدّها لكل عمود.", "en": "isnull marks each missing value as True, and sum counts them per column." }
+    },
+    {
+      "id": "da8", "difficulty": "medium",
+      "q": { "ar": "ما القيمة الشاذة (Outlier)؟", "en": "What is an outlier?" },
+      "options": [
+        { "id": "a", "text": { "ar": "القيمة الأكثر تكرارًا في البيانات", "en": "The value that appears most often in the data" } },
+        { "id": "b", "text": { "ar": "قيمة ناقصة في أحد الصفوف", "en": "A value that is missing from a row" } },
+        { "id": "c", "text": { "ar": "متوسط كل القيم في عمود", "en": "The average of all the values in a column" } },
+        { "id": "d", "text": { "ar": "قيمة بعيدة جدًا عن معظم البيانات", "en": "A value far away from most of the data" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "قد تكون خطأ إدخال أو حالة حقيقية نادرة، ولذلك نفحصها قبل حذفها.", "en": "It may be an entry error or a real rare case, so we check before removing it." }
+    },
+    {
+      "id": "da9", "difficulty": "medium",
+      "q": { "ar": "معامل ارتباط قيمته 0.9 بين متغيرين يعني:", "en": "A correlation of 0.9 between two variables means:" },
+      "options": [
+        { "id": "a", "text": { "ar": "أن أحدهما يسبب الآخر بالتأكيد", "en": "One definitely causes the other" } },
+        { "id": "b", "text": { "ar": "علاقة طردية قوية", "en": "A strong positive relationship" } },
+        { "id": "c", "text": { "ar": "لا توجد علاقة", "en": "No relationship" } },
+        { "id": "d", "text": { "ar": "علاقة عكسية قوية", "en": "A strong negative relationship" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "الارتباط لا يعني السببية؛ قد يكون هناك عامل ثالث يؤثر في الاثنين.", "en": "Correlation is not causation; a third factor may affect both." }
+    },
+    {
+      "id": "da10", "difficulty": "medium",
+      "q": { "ar": "في SQL، أي جملة تجمع الصفوف لتطبيق دوال مثل COUNT عليها؟", "en": "In SQL, which clause groups rows so you can apply functions like COUNT?" },
+      "options": [
+        { "id": "a", "text": { "ar": "ORDER BY", "en": "ORDER BY" } },
+        { "id": "b", "text": { "ar": "WHERE", "en": "WHERE" } },
+        { "id": "c", "text": { "ar": "GROUP BY", "en": "GROUP BY" } },
+        { "id": "d", "text": { "ar": "JOIN", "en": "JOIN" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "مثال: `SELECT city, COUNT(*) FROM students GROUP BY city;`", "en": "Example: `SELECT city, COUNT(*) FROM students GROUP BY city;`" }
+    },
+    {
+      "id": "da11", "difficulty": "hard",
+      "q": { "ar": "ما الفرق بين WHERE و HAVING في SQL؟", "en": "What is the difference between WHERE and HAVING in SQL?" },
+      "options": [
+        { "id": "a", "text": { "ar": "هما الشيء نفسه، و HAVING اسم أقدم فقط", "en": "They are the same; HAVING is just an older name" } },
+        { "id": "b", "text": { "ar": "HAVING تصفّي الصفوف قبل التجميع، و WHERE تصفّي المجموعات بعد التجميع", "en": "HAVING filters rows before grouping; WHERE filters the groups after aggregation" } },
+        { "id": "c", "text": { "ar": "WHERE تعمل مع الأرقام فقط، و HAVING تعمل مع النصوص", "en": "WHERE works only with numbers; HAVING works with text" } },
+        { "id": "d", "text": { "ar": "WHERE تصفّي الصفوف قبل التجميع، و HAVING تصفّي المجموعات بعده", "en": "WHERE filters rows before grouping; HAVING filters groups after aggregation" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "مثلًا `HAVING COUNT(*) > 10` لعرض المدن التي فيها أكثر من 10 طلاب.", "en": "For example `HAVING COUNT(*) > 10` shows only cities with more than 10 students." }
+    },
+    {
+      "id": "da12", "difficulty": "hard",
+      "q": { "ar": "ما المقصود بالإفراط في التعلم (Overfitting)؟", "en": "What is overfitting?" },
+      "options": [
+        { "id": "a", "text": { "ar": "النموذج يطابق بيانات التدريب أكثر من اللازم فيفشل مع البيانات الجديدة", "en": "The model fits the training data too closely and fails on new data" } },
+        { "id": "b", "text": { "ar": "النموذج أبسط من أن يلتقط النمط الحقيقي في بيانات التدريب", "en": "The model is too simple to capture the real pattern in the training data" } },
+        { "id": "c", "text": { "ar": "البيانات أكبر من ذاكرة الحاسوب", "en": "The dataset is too large for the computer's memory" } },
+        { "id": "d", "text": { "ar": "بيانات التدريب فيها قيم مفقودة كثيرة", "en": "The training data contains too many missing values" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "علامته: دقة عالية جدًا في التدريب ومنخفضة في الاختبار.", "en": "The sign: very high training accuracy but low test accuracy." }
+    },
+    {
+      "id": "da13", "difficulty": "hard",
+      "q": { "ar": "لماذا نقسّم البيانات إلى مجموعة تدريب ومجموعة اختبار؟", "en": "Why split data into training and test sets?" },
+      "options": [
+        { "id": "a", "text": { "ar": "لتسريع التدريب بإعطاء النموذج بيانات أقل لمعالجتها", "en": "To make training faster by giving the model less data to process" } },
+        { "id": "b", "text": { "ar": "لتقييم النموذج على بيانات لم يرها من قبل", "en": "To evaluate the model on data it has never seen" } },
+        { "id": "c", "text": { "ar": "لتقليل حجم ملف البيانات", "en": "To reduce the size of the dataset file" } },
+        { "id": "d", "text": { "ar": "لحذف القيم الشاذة والمفقودة", "en": "To remove outliers and missing values" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "بيانات الاختبار تحاكي الواقع، فتخبرنا كيف سيعمل النموذج بعد نشره.", "en": "Test data mimics the real world, showing how the model will do once deployed." }
+    },
+    {
+      "id": "da14", "difficulty": "hard",
+      "q": { "ar": "أي مقياس يتأثر أقل بالقيم المتطرفة؟", "en": "Which measure is least affected by extreme values?" },
+      "options": [
+        { "id": "a", "text": { "ar": "المتوسط الحسابي", "en": "The mean" } },
+        { "id": "b", "text": { "ar": "المدى", "en": "The range" } },
+        { "id": "c", "text": { "ar": "الوسيط", "en": "The median" } },
+        { "id": "d", "text": { "ar": "المجموع", "en": "The sum" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "الوسيط يعتمد على ترتيب القيم لا على حجمها، لذلك يُستخدم مع الرواتب مثلًا.", "en": "The median depends on order, not size, which is why it is used for things like salaries." }
+    },
+    {
+      "id": "da15", "difficulty": "hard",
+      "q": { "ar": "بيانات فيها 95% «لا» و5% «نعم». نموذج يتوقع «لا» دائمًا يحقق دقة 95%. ماذا يوضح ذلك؟", "en": "A dataset is 95% \"No\" and 5% \"Yes\". A model that always predicts \"No\" gets 95% accuracy. What does this show?" },
+      "options": [
+        { "id": "a", "text": { "ar": "النموذج ممتاز وجاهز للاستخدام", "en": "The model is excellent and ready to use" } },
+        { "id": "b", "text": { "ar": "البيانات صُنّفت بشكل خاطئ", "en": "The data was labelled incorrectly" } },
+        { "id": "c", "text": { "ar": "95% هي أعلى دقة ممكنة هنا", "en": "95% is the highest accuracy possible here" } },
+        { "id": "d", "text": { "ar": "الدقة قد تكون مضللة مع البيانات غير المتوازنة", "en": "Accuracy can mislead on imbalanced data" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "النموذج لم يكتشف أي حالة «نعم»، فالـ Recall لهذه الفئة = 0. مقاييس Precision و Recall تكشف ذلك، أما الدقة فتخفيه.", "en": "The model never finds a \"Yes\", so recall for that class is 0. Precision and recall show this; accuracy hides it." }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "da-t1", "level": "beginner",
+      "title": { "ar": "تنظيف جدول بيانات", "en": "Clean a messy spreadsheet" },
+      "description": { "ar": "حمّل ملف بيانات غير مرتب (مثل درجات طلاب أو مبيعات) وقم بإزالة التكرار، ومعالجة القيم المفقودة، وتوحيد الصيغ، ثم احسب المتوسط والوسيط وأعلى وأقل قيمة.", "en": "Take a messy dataset (such as student grades or sales), remove duplicates, handle missing values and standardise formats, then compute mean, median, max and min." },
+      "deliverable": { "ar": "رابط الملف بعد التنظيف (Google Sheets أو Excel) مع ملاحظة بالخطوات", "en": "A link to the cleaned file (Google Sheets or Excel) with a note of your steps" }
+    },
+    {
+      "id": "da-t2", "level": "beginner",
+      "title": { "ar": "3 رسوم بيانية تحكي قصة", "en": "Three charts that tell a story" },
+      "description": { "ar": "اختر مجموعة بيانات من Kaggle، واصنع 3 رسوم بيانية مناسبة (خطي، أعمدة، تشتت)، واكتب سطرين تحت كل رسم يوضحان ما يعنيه.", "en": "Pick a Kaggle dataset, make 3 suitable charts (line, bar, scatter) and write two lines under each chart explaining what it means." },
+      "deliverable": { "ar": "رابط ملف أو PDF يحتوي الرسوم والتعليقات", "en": "A file or PDF link with the charts and notes" }
+    },
+    {
+      "id": "da-t3", "level": "intermediate",
+      "title": { "ar": "تحليل استكشافي بـ pandas", "en": "Exploratory analysis with pandas" },
+      "description": { "ar": "في Jupyter Notebook أو Google Colab: حمّل مجموعة بيانات، افحصها، نظّفها، واستخرج 5 نتائج واضحة مدعومة برسوم من matplotlib أو seaborn.", "en": "In a Jupyter Notebook or Google Colab: load a dataset, inspect it, clean it, and pull out 5 clear findings backed by matplotlib or seaborn charts." },
+      "deliverable": { "ar": "رابط الـ Notebook على GitHub أو Colab", "en": "A notebook link on GitHub or Colab" }
+    },
+    {
+      "id": "da-t4", "level": "intermediate",
+      "title": { "ar": "10 أسئلة عمل بـ SQL", "en": "Ten business questions in SQL" },
+      "description": { "ar": "على قاعدة بيانات تجريبية (مثل Chinook أو Northwind)، اكتب استعلامات تجيب عن 10 أسئلة عمل باستخدام JOIN و GROUP BY و HAVING، مثل: أكثر 5 عملاء إنفاقًا.", "en": "On a sample database (such as Chinook or Northwind), write queries that answer 10 business questions using JOIN, GROUP BY and HAVING, such as the top 5 customers by spend." },
+      "deliverable": { "ar": "رابط ملف .sql على GitHub مع النتائج", "en": "A GitHub link to a .sql file with results" }
+    },
+    {
+      "id": "da-t5", "level": "advanced",
+      "title": { "ar": "لوحة بيانات تفاعلية", "en": "Interactive dashboard" },
+      "description": { "ar": "ابنِ لوحة بيانات في Power BI أو Looker Studio أو Streamlit تحتوي مؤشرات أداء ومرشحات، وتجيب عن سؤال عمل محدد تكتبه في أعلى اللوحة.", "en": "Build a dashboard in Power BI, Looker Studio or Streamlit with KPIs and filters that answers one business question you state at the top." },
+      "deliverable": { "ar": "رابط اللوحة أو لقطات شاشة مع ملف المشروع", "en": "A dashboard link, or screenshots plus the project file" }
+    },
+    {
+      "id": "da-t6", "level": "advanced",
+      "title": { "ar": "نموذج تنبؤ وتقييمه", "en": "Build and evaluate a prediction model" },
+      "description": { "ar": "باستخدام scikit-learn، ابنِ نموذجًا للتصنيف أو الانحدار، وقسّم البيانات إلى تدريب واختبار، وقارن نموذجين على الأقل بمقاييس مناسبة، واشرح النتيجة بلغة بسيطة.", "en": "With scikit-learn, build a classification or regression model, split train/test, compare at least two models with suitable metrics and explain the result in plain language." },
+      "deliverable": { "ar": "رابط الـ Notebook على GitHub", "en": "A notebook link on GitHub" }
+    }
+  ],
+  "plans": {
+    "beginner": {
+      "title": { "ar": "خطة البداية في Data", "en": "Data starter plan" },
+      "summary": { "ar": "ابدأ بالإحصاء الأساسي والجداول قبل البرمجة.", "en": "Start with basic statistics and spreadsheets before coding." },
+      "steps": [
+        { "id": "s1", "title": { "ar": "الإحصاء الوصفي", "en": "Descriptive statistics" }, "details": { "ar": "المتوسط، الوسيط، المنوال، الانحراف المعياري، والتوزيعات.", "en": "Mean, median, mode, standard deviation and distributions." } },
+        { "id": "s2", "title": { "ar": "Excel أو Google Sheets", "en": "Excel or Google Sheets" }, "details": { "ar": "الدوال الأساسية، الجداول المحورية، والتنظيف. نفّذ المهمة الأولى.", "en": "Core functions, pivot tables and cleaning. Complete task 1." } },
+        { "id": "s3", "title": { "ar": "تصوير البيانات", "en": "Data visualisation" }, "details": { "ar": "متى تستخدم كل نوع رسم، وكيف تكتب عنوانًا يوضح النتيجة. نفّذ المهمة الثانية.", "en": "When to use each chart type and how to write a title that states the finding. Complete task 2." } },
+        { "id": "s4", "title": { "ar": "أساسيات Python", "en": "Python basics" }, "details": { "ar": "المتغيرات، القوائم، القواميس، الحلقات، والدوال.", "en": "Variables, lists, dictionaries, loops and functions." } }
+      ]
+    },
+    "intermediate": {
+      "title": { "ar": "خطة المستوى المتوسط في Data", "en": "Data intermediate plan" },
+      "summary": { "ar": "حلّل البيانات بالكود واستخرج نتائج تقنع صاحب القرار.", "en": "Analyse data with code and produce findings that convince decision-makers." },
+      "steps": [
+        { "id": "s1", "title": { "ar": "pandas", "en": "pandas" }, "details": { "ar": "القراءة، التصفية، التجميع groupby، الدمج merge، ومعالجة القيم المفقودة. نفّذ المهمة الثالثة.", "en": "Reading, filtering, groupby, merge and missing values. Complete task 3." } },
+        { "id": "s2", "title": { "ar": "SQL", "en": "SQL" }, "details": { "ar": "JOIN و GROUP BY و HAVING والاستعلامات الفرعية. نفّذ المهمة الرابعة.", "en": "JOIN, GROUP BY, HAVING and subqueries. Complete task 4." } },
+        { "id": "s3", "title": { "ar": "الرسوم بالكود", "en": "Charts in code" }, "details": { "ar": "matplotlib و seaborn، مع عناوين ومحاور واضحة.", "en": "matplotlib and seaborn, with clear titles and axes." } },
+        { "id": "s4", "title": { "ar": "عرض النتائج", "en": "Presenting findings" }, "details": { "ar": "اكتب ملخصًا من 5 أسطر لكل تحليل: السؤال، الطريقة، النتيجة، التوصية.", "en": "Write a 5-line summary for each analysis: question, method, finding, recommendation." } }
+      ]
+    },
+    "advanced": {
+      "title": { "ar": "خطة المستوى المتقدم في Data", "en": "Data advanced plan" },
+      "summary": { "ar": "ادخل إلى لوحات البيانات وتعلم الآلة بمنهجية صحيحة.", "en": "Move into dashboards and machine learning with a sound method." },
+      "steps": [
+        { "id": "s1", "title": { "ar": "لوحات البيانات", "en": "Dashboards" }, "details": { "ar": "Power BI أو Looker Studio أو Streamlit، ومؤشرات الأداء. نفّذ المهمة الخامسة.", "en": "Power BI, Looker Studio or Streamlit, and KPIs. Complete task 5." } },
+        { "id": "s2", "title": { "ar": "تعلم الآلة", "en": "Machine learning" }, "details": { "ar": "الانحدار، التصنيف، تقسيم البيانات، والتحقق المتقاطع. نفّذ المهمة السادسة.", "en": "Regression, classification, train/test splits and cross-validation. Complete task 6." } },
+        { "id": "s3", "title": { "ar": "مقاييس التقييم", "en": "Evaluation metrics" }, "details": { "ar": "Accuracy و Precision و Recall و F1 و RMSE، ومتى تستخدم كل واحد.", "en": "Accuracy, precision, recall, F1 and RMSE, and when to use each." } },
+        { "id": "s4", "title": { "ar": "معرض الأعمال", "en": "Portfolio" }, "details": { "ar": "انشر 3 مشروعات على GitHub و Kaggle، لكل منها README يشرح المشكلة والنتيجة.", "en": "Publish 3 projects on GitHub and Kaggle, each with a README explaining the problem and result." } }
+      ]
+    }
+  },
+  "resources": [
+    { "title": "Kaggle Learn", "url": "https://www.kaggle.com/learn", "lang": "en", "type": "course" },
+    { "title": "pandas Getting Started", "url": "https://pandas.pydata.org/docs/getting_started/index.html", "lang": "en", "type": "docs" },
+    { "title": "SQLBolt", "url": "https://sqlbolt.com/", "lang": "en", "type": "course" },
+    { "title": "Khan Academy: Statistics", "url": "https://www.khanacademy.org/math/statistics-probability", "lang": "en", "type": "course" },
+    { "title": "scikit-learn User Guide", "url": "https://scikit-learn.org/stable/user_guide.html", "lang": "en", "type": "docs" },
+    { "title": "Data Analyst Roadmap", "url": "https://roadmap.sh/data-analyst", "lang": "en", "type": "roadmap" }
+  ]
+}

@@ -1,0 +1,114 @@
+/* Only the two font files the pages use (Arabic text, Latin letters and digits),
+   so the single demo file stays small. Same families as the full app. */
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Readex Pro Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 160 700;
+  src: url(../node_modules/@fontsource-variable/readex-pro/files/readex-pro-arabic-wght-normal.woff2)
+    format('woff2-variations');
+  unicode-range:
+    U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F,
+    U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+
+/* The "demo version" note in the bottom corner. */
+.demo-note {
+  position: fixed;
+  z-index: 25;
+  inset-block-end: 16px;
+  inset-inline-start: 16px;
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+  max-inline-size: min(340px, calc(100vw - 32px));
+  font-size: 0.9rem;
+}
+.demo-note__pill {
+  padding: 6px 14px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+.demo-note__pill::before {
+  content: '';
+  display: inline-block;
+  inline-size: 8px;
+  block-size: 8px;
+  margin-inline-end: 8px;
+  border-radius: 50%;
+  background: var(--signal);
+  vertical-align: middle;
+}
+.demo-note__pill:focus-visible,
+.demo-note__reset:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+.demo-note__panel {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  background: var(--surface);
+  color: var(--ink-2);
+  box-shadow: 0 12px 32px rgb(20 16 50 / 0.18);
+}
+.demo-note__panel[hidden] {
+  display: none;
+}
+.demo-note__panel p {
+  margin: 0;
+}
+.demo-note__title {
+  font-weight: 700;
+  color: var(--ink);
+}
+.demo-note__panel strong {
+  color: var(--ink);
+}
+.demo-note__cred {
+  display: inline-block;
+  white-space: pre;
+  unicode-bidi: isolate;
+  font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+.demo-note__reset {
+  justify-self: start;
+  margin-block-start: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--primary);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+:root[data-theme='dark'] .demo-note__reset {
+  border-color: var(--ink-2);
+  color: var(--ink);
+}
+@media print {
+  .demo-note {
+    display: none;
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "info": {
+    "ar": "15 سؤالًا عن اهتماماتك وطريقة تفكيرك. لا توجد إجابة صحيحة أو خاطئة، اختر الأقرب إليك.",
+    "en": "15 questions about your interests and how you think. There are no right or wrong answers, pick what fits you best."
+  },
+  "questions": [
+    {
+      "id": "tq1",
+      "q": { "ar": "أي نشاط ستستمتع به أكثر في مشروع صغير خلال العطلة؟", "en": "Which activity would you enjoy most in a small weekend project?" },
+      "options": [
+        { "id": "a", "text": { "ar": "أرسم شكل التطبيق وأفكر في طريقة استخدام الناس له", "en": "Sketching how the app looks and how people will use it" }, "points": { "uiux": 3 } },
+        { "id": "b", "text": { "ar": "أبني صفحة تفاعلية تعمل في المتصفح", "en": "Building an interactive page that works in the browser" }, "points": { "frontend": 3, "uiux": 1 } },
+        { "id": "c", "text": { "ar": "أبني النظام الذي يحفظ البيانات ويعالجها خلف التطبيق", "en": "Making the system that stores and processes data behind the app" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "أحلل مجموعة بيانات وأكتشف فيها شيئًا مثيرًا", "en": "Analysing a dataset to discover something interesting" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq2",
+      "q": { "ar": "عندما تستخدم تطبيقًا جديدًا، ما أول ما تلاحظه؟", "en": "When you use a new app, what do you notice first?" },
+      "options": [
+        { "id": "a", "text": { "ar": "هل هو سهل ومريح في الاستخدام", "en": "Whether it is easy and comfortable to use" }, "points": { "uiux": 3 } },
+        { "id": "b", "text": { "ar": "الحركات وطريقة استجابة الصفحة عند الضغط", "en": "The animations and how the page reacts when I click" }, "points": { "frontend": 3 } },
+        { "id": "c", "text": { "ar": "سرعته، وهل يفقد بياناتي أم لا", "en": "How fast it is and whether it ever loses my data" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "البيانات التي يجمعها وما يمكن أن يستنتجه منها", "en": "What data it collects and what it could learn from it" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq3",
+      "q": { "ar": "أي نوع من المواد الدراسية كنت تحبه أكثر؟", "en": "Which kind of subject did you enjoy most in your studies?" },
+      "options": [
+        { "id": "a", "text": { "ar": "الرسم والفنون والتصميم", "en": "Drawing, art and design" }, "points": { "uiux": 3 } },
+        { "id": "b", "text": { "ar": "البرمجة التي تظهر نتيجتها أمامي مباشرة", "en": "Programming where I see the result right away" }, "points": { "frontend": 3 } },
+        { "id": "c", "text": { "ar": "المنطق والخوارزميات وقواعد البيانات", "en": "Logic, algorithms and databases" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "الرياضيات والإحصاء", "en": "Mathematics and statistics" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq4",
+      "q": { "ar": "صديقك يملك متجرًا صغيرًا ويريد التوسع عبر الإنترنت. كيف ستساعده؟", "en": "Your friend has a small shop and wants to grow online. How would you help?" },
+      "options": [
+        { "id": "a", "text": { "ar": "أصمم تجربة تسوق واضحة وجذابة للعملاء", "en": "Design a clear, attractive store experience for customers" }, "points": { "uiux": 3 } },
+        { "id": "b", "text": { "ar": "أبني صفحات موقع المتجر", "en": "Build the store's website pages" }, "points": { "frontend": 3 } },
+        { "id": "c", "text": { "ar": "أبني نظام الطلبات والدفع", "en": "Build the ordering and payment system" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "أحلل المبيعات لأعرف أكثر المنتجات والأوقات مبيعًا", "en": "Analyse sales to find the best-selling products and times" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq5",
+      "q": { "ar": "أي عبارة تصف طريقتك في حل المشكلات؟", "en": "Which sentence describes how you solve problems?" },
+      "options": [
+        { "id": "a", "text": { "ar": "أبدأ بفهم الأشخاص الذين يواجهون المشكلة", "en": "I start by understanding the people who have the problem" }, "points": { "uiux": 3, "data": 1 } },
+        { "id": "b", "text": { "ar": "أجرّب بسرعة وأرى النتيجة فورًا", "en": "I try things quickly and see the result immediately" }, "points": { "frontend": 3 } },
+        { "id": "c", "text": { "ar": "أقسّمها إلى خطوات وأبني هيكلًا متينًا", "en": "I break it into steps and build a solid structure" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "أجمع الأدلة والأرقام قبل أن أقرر", "en": "I collect evidence and numbers before I decide" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq6",
+      "q": { "ar": "أي أداة تتمنى أن تحترفها؟", "en": "Which tool would you like to master?" },
+      "options": [
+        { "id": "a", "text": { "ar": "Figma", "en": "Figma" }, "points": { "uiux": 3 } },
+        { "id": "b", "text": { "ar": "React", "en": "React" }, "points": { "frontend": 3 } },
+        { "id": "c", "text": { "ar": "Node.js وقواعد البيانات", "en": "Node.js and databases" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "Python و Power BI", "en": "Python and Power BI" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq7",
+      "q": { "ar": "أي تعليق على عملك سيجعلك أكثر فخرًا؟", "en": "Which comment about your work would make you proudest?" },
+      "options": [
+        { "id": "a", "text": { "ar": "«هذا التطبيق سهل جدًا في الاستخدام»", "en": "\"This app is so easy to use\"" }, "points": { "uiux": 3 } },
+        { "id": "b", "text": { "ar": "«الموقع يبدو رائعًا على الهاتف والحاسوب»", "en": "\"The site looks great on my phone and laptop\"" }, "points": { "frontend": 3, "uiux": 1 } },
+        { "id": "c", "text": { "ar": "«النظام تحمّل آلاف المستخدمين دون أن يتعطل»", "en": "\"The system handled thousands of users without crashing\"" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "«تحليلك غيّر قرارنا»", "en": "\"Your analysis changed our decision\"" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq8",
+      "q": { "ar": "ما شعورك تجاه كتابة الكود لساعات طويلة؟", "en": "How do you feel about writing code for long hours?" },
+      "options": [
+        { "id": "a", "text": { "ar": "أفضّل العمل البصري على كتابة الكود", "en": "I prefer visual work over code" }, "points": { "uiux": 3 } },
+        { "id": "b", "text": { "ar": "أستمتع به عندما أرى النتيجة على الشاشة", "en": "I enjoy it when I see the result on screen" }, "points": { "frontend": 3 } },
+        { "id": "c", "text": { "ar": "أستمتع به حتى لو لم تكن هناك نتيجة مرئية", "en": "I enjoy it even when there is no visual result" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "أحب الكود كأداة للتحليل والرسوم البيانية", "en": "I like code as a tool for analysis and charts" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq9",
+      "q": { "ar": "أي لغز يبدو لك أكثر متعة؟", "en": "Which puzzle sounds most fun to you?" },
+      "options": [
+        { "id": "a", "text": { "ar": "إعادة ترتيب شاشة مربكة ليجد المستخدم ما يريده", "en": "Rearranging a confusing screen so users find what they need" }, "points": { "uiux": 3 } },
+        { "id": "b", "text": { "ar": "جعل تخطيط الصفحة سليمًا على كل أحجام الشاشات", "en": "Making a page layout look right on every screen size" }, "points": { "frontend": 3 } },
+        { "id": "c", "text": { "ar": "اكتشاف سبب استغراق طلب 5 ثوانٍ وجعله نصف ثانية", "en": "Finding out why a request takes 5 seconds and making it half a second" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "العثور على نمط مخفي في جدول أرقام", "en": "Finding the pattern hidden in a table of numbers" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq10",
+      "q": { "ar": "في المشروعات الجماعية، أي دور تتولاه تلقائيًا؟", "en": "In a team project, which role do you naturally take?" },
+      "options": [
+        { "id": "a", "text": { "ar": "من يفكر في المستخدم وطريقة العرض", "en": "The one who thinks about the user and the presentation" }, "points": { "uiux": 3 } },
+        { "id": "b", "text": { "ar": "من يحوّل التصميم إلى شيء يعمل", "en": "The one who turns the design into something that works" }, "points": { "frontend": 3 } },
+        { "id": "c", "text": { "ar": "من ينظم النظام وطريقة ترابط أجزائه", "en": "The one who organises the system and how the parts connect" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "من يقيس النتائج ويكتب التقرير", "en": "The one who measures the results and writes the report" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq11",
+      "q": { "ar": "أي فيديو على يوتيوب ستضغط عليه؟", "en": "Which YouTube video would you click on?" },
+      "options": [
+        { "id": "a", "text": { "ar": "«10 أخطاء تصميم تزعج المستخدمين»", "en": "\"10 design mistakes that annoy users\"" }, "points": { "uiux": 3 } },
+        { "id": "b", "text": { "ar": "«ابنِ موقع معرض أعمال أنيقًا في ساعة»", "en": "\"Build a stylish portfolio site in one hour\"" }, "points": { "frontend": 3 } },
+        { "id": "c", "text": { "ar": "«كيف تخدم نتفليكس الملايين في الوقت نفسه»", "en": "\"How Netflix serves millions at the same time\"" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "«كيف يتوقع سبوتيفاي الأغاني التي ستحبها»", "en": "\"How Spotify predicts the songs you will like\"" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq12",
+      "q": { "ar": "ما أكثر ما تهتم به في عملك؟", "en": "What do you care about most in your work?" },
+      "options": [
+        { "id": "a", "text": { "ar": "أن يكون جميلًا ومفهومًا للناس", "en": "That it is beautiful and makes sense to people" }, "points": { "uiux": 3, "frontend": 1 } },
+        { "id": "b", "text": { "ar": "أن يكون تفاعليًا وسلسًا", "en": "That it is interactive and smooth" }, "points": { "frontend": 3 } },
+        { "id": "c", "text": { "ar": "أن يكون آمنًا ومستقرًا ومنظمًا", "en": "That it is secure, reliable and well organised" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "أن يكون دقيقًا ومبنيًا على أدلة", "en": "That it is accurate and based on evidence" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq13",
+      "q": { "ar": "لو لديك شهر فارغ لتتعلم شيئًا جديدًا، ستختار:", "en": "If you had a free month to learn something, you would choose:" },
+      "options": [
+        { "id": "a", "text": { "ar": "أبحاث المستخدمين وبناء النماذج الأولية", "en": "User research and prototyping" }, "points": { "uiux": 3 } },
+        { "id": "b", "text": { "ar": "الحركات وأطر عمل الواجهات الحديثة", "en": "Animations and modern UI frameworks" }, "points": { "frontend": 3 } },
+        { "id": "c", "text": { "ar": "واجهات البرمجة (APIs) والخوادم والأمان", "en": "APIs, servers and security" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "أساسيات تعلم الآلة وتصوير البيانات", "en": "Machine learning basics and data visualisation" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq14",
+      "q": { "ar": "أي عبارة تصفك أكثر؟", "en": "Which sentence fits you best?" },
+      "options": [
+        { "id": "a", "text": { "ar": "ألاحظ التفاصيل في الألوان والمسافات والخطوط", "en": "I notice details in colours, spacing and fonts" }, "points": { "uiux": 3, "frontend": 1 } },
+        { "id": "b", "text": { "ar": "أحب أن أرى التعديل الذي أجريته يظهر فورًا", "en": "I like seeing my changes appear instantly" }, "points": { "frontend": 3 } },
+        { "id": "c", "text": { "ar": "أحب التفكير فيما يحدث «خلف الكواليس»", "en": "I like thinking about what happens behind the scenes" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "أحب أن أسأل «لماذا؟» وأجيب بالأرقام", "en": "I like asking \"why?\" and answering with numbers" }, "points": { "data": 3 } }
+      ]
+    },
+    {
+      "id": "tq15",
+      "q": { "ar": "أي عمل تفضل أن تعرضه في معرض أعمالك؟", "en": "Which piece of work would you rather show in your portfolio?" },
+      "options": [
+        { "id": "a", "text": { "ar": "دراسة حالة كاملة لإعادة تصميم تطبيق", "en": "A full case study of an app redesign" }, "points": { "uiux": 3 } },
+        { "id": "b", "text": { "ar": "موقع حقيقي يعمل ويستطيع الناس استخدامه", "en": "A live website people can use" }, "points": { "frontend": 3 } },
+        { "id": "c", "text": { "ar": "واجهة برمجة (API) موثقة تستخدمها تطبيقات أخرى", "en": "A documented API that other apps use" }, "points": { "backend": 3 } },
+        { "id": "d", "text": { "ar": "لوحة بيانات أو تقرير يحمل نتائج حقيقية", "en": "A dashboard or report with real insights" }, "points": { "data": 3 } }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Masar: the landing and sign-in pages may be indexed; student and admin pages are private.
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /plan
+Disallow: /tasks
+Disallow: /account
+Disallow: /api/

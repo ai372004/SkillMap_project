@@ -1,0 +1,263 @@
+{
+  "track": "backend",
+  "levelTest": [
+    {
+      "id": "be1", "difficulty": "easy",
+      "q": { "ar": "ما الوظيفة الأساسية للـ Back-end؟", "en": "What is the main job of the back-end?" },
+      "options": [
+        { "id": "a", "text": { "ar": "اختيار الألوان والخطوط التي يراها المستخدم", "en": "Choosing the colours and fonts the user sees" } },
+        { "id": "b", "text": { "ar": "معالجة المنطق والبيانات والطلبات خلف التطبيق", "en": "Handling logic, data and requests behind the app" } },
+        { "id": "c", "text": { "ar": "بناء تخطيط الصفحة باستخدام HTML و CSS", "en": "Building the page layout with HTML and CSS" } },
+        { "id": "d", "text": { "ar": "رسم شاشات التطبيق واختبارها مع مستخدمين حقيقيين", "en": "Drawing the app's screens and testing them with real users" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "الواجهة الخلفية تستقبل الطلبات وتتحقق منها وتتعامل مع قاعدة البيانات وترد بالنتيجة.", "en": "The back-end receives requests, validates them, works with the database and sends back the result." }
+    },
+    {
+      "id": "be2", "difficulty": "easy",
+      "q": { "ar": "أي طريقة HTTP تُستخدم عادةً لجلب البيانات؟", "en": "Which HTTP method is usually used to fetch data?" },
+      "options": [
+        { "id": "a", "text": { "ar": "POST", "en": "POST" } },
+        { "id": "b", "text": { "ar": "DELETE", "en": "DELETE" } },
+        { "id": "c", "text": { "ar": "GET", "en": "GET" } },
+        { "id": "d", "text": { "ar": "PUT", "en": "PUT" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "GET للقراءة، POST للإنشاء، PUT/PATCH للتعديل، DELETE للحذف.", "en": "GET reads, POST creates, PUT/PATCH updates, DELETE removes." }
+    },
+    {
+      "id": "be3", "difficulty": "easy",
+      "q": { "ar": "ما قاعدة البيانات؟", "en": "What is a database?" },
+      "options": [
+        { "id": "a", "text": { "ar": "نظام منظم لتخزين البيانات واسترجاعها", "en": "An organised system for storing and retrieving data" } },
+        { "id": "b", "text": { "ar": "لغة برمجة تُستخدم لبناء خوادم الويب وواجهات API", "en": "A programming language used to build web servers and APIs" } },
+        { "id": "c", "text": { "ar": "برنامج لتصفح المواقع على الإنترنت", "en": "A program for browsing websites on the internet" } },
+        { "id": "d", "text": { "ar": "أداة لتصميم شاشات التطبيق", "en": "A tool for designing the screens of an app" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "أمثلة: MySQL و PostgreSQL (علائقية)، و MongoDB (مستندات).", "en": "Examples: MySQL and PostgreSQL (relational), MongoDB (document)." }
+    },
+    {
+      "id": "be4", "difficulty": "easy",
+      "q": { "ar": "إلى ماذا يشير الاختصار API؟", "en": "What does API stand for?" },
+      "options": [
+        { "id": "a", "text": { "ar": "Advanced Program Internet", "en": "Advanced Program Internet" } },
+        { "id": "b", "text": { "ar": "Applied Protocol Integration", "en": "Applied Protocol Integration" } },
+        { "id": "c", "text": { "ar": "Automatic Page Index", "en": "Automatic Page Index" } },
+        { "id": "d", "text": { "ar": "Application Programming Interface", "en": "Application Programming Interface" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "الـ API واجهة تسمح لبرنامجين بالتواصل وتبادل البيانات.", "en": "An API is an interface that lets two programs talk and exchange data." }
+    },
+    {
+      "id": "be5", "difficulty": "easy",
+      "q": { "ar": "أي مما يلي بيئة تشغيل تُستخدم في الـ Back-end؟", "en": "Which of these is a runtime used for back-end work?" },
+      "options": [
+        { "id": "a", "text": { "ar": "CSS", "en": "CSS" } },
+        { "id": "b", "text": { "ar": "Node.js", "en": "Node.js" } },
+        { "id": "c", "text": { "ar": "Figma", "en": "Figma" } },
+        { "id": "d", "text": { "ar": "HTML", "en": "HTML" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "Node.js يشغّل JavaScript على الخادم خارج المتصفح.", "en": "Node.js runs JavaScript on the server, outside the browser." }
+    },
+    {
+      "id": "be6", "difficulty": "medium",
+      "q": { "ar": "ماذا يعني رمز الحالة HTTP 404؟", "en": "What does HTTP status code 404 mean?" },
+      "options": [
+        { "id": "a", "text": { "ar": "حدث خطأ غير متوقع في الخادم", "en": "The server hit an unexpected error" } },
+        { "id": "b", "text": { "ar": "نجح الطلب وأُعيدت البيانات", "en": "The request succeeded and data was returned" } },
+        { "id": "c", "text": { "ar": "المورد المطلوب غير موجود", "en": "The requested resource was not found" } },
+        { "id": "d", "text": { "ar": "يجب تسجيل الدخول للوصول إلى هذا المورد", "en": "You must log in to access this resource" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "200 نجاح، 401 غير مصرح، 404 غير موجود، 500 خطأ في الخادم.", "en": "200 success, 401 unauthorised, 404 not found, 500 server error." }
+    },
+    {
+      "id": "be7", "difficulty": "medium",
+      "q": { "ar": "ما الفرق الأساسي بين قواعد بيانات SQL و NoSQL؟", "en": "What is the main difference between SQL and NoSQL databases?" },
+      "options": [
+        { "id": "a", "text": { "ar": "SQL تستخدم جداول بمخطط ثابت، و NoSQL تسمح بصيغ مرنة مثل المستندات", "en": "SQL uses tables with a fixed schema; NoSQL allows flexible formats" } },
+        { "id": "b", "text": { "ar": "قواعد SQL أحدث وحلّت محل قواعد NoSQL", "en": "SQL databases are newer and replaced NoSQL databases" } },
+        { "id": "c", "text": { "ar": "قواعد NoSQL لا تستطيع تخزين العلاقات ولا يمكن الاستعلام منها", "en": "NoSQL databases cannot store relationships or be queried" } },
+        { "id": "d", "text": { "ar": "SQL تعمل على خوادم السحابة فقط، بينما NoSQL تعمل على الأجهزة المحلية فقط", "en": "SQL runs only on cloud servers, while NoSQL runs only on local machines" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "مثلًا MongoDB تخزن مستندات تشبه JSON، بينما MySQL تخزن صفوفًا في جداول.", "en": "For example MongoDB stores JSON-like documents while MySQL stores rows in tables." }
+    },
+    {
+      "id": "be8", "difficulty": "medium",
+      "q": { "ar": "لماذا نخزن كلمات المرور بعد تشفيرها بدالة Hash؟", "en": "Why do we hash passwords before storing them?" },
+      "options": [
+        { "id": "a", "text": { "ar": "لجعلها أقصر حتى تشغل مساحة أقل", "en": "To make them shorter so they take less space" } },
+        { "id": "b", "text": { "ar": "لتسريع تسجيل الدخول عندما يكثر المستخدمون", "en": "To make login faster when there are many users" } },
+        { "id": "c", "text": { "ar": "ليستطيع المدير الاطلاع عليها وإرسالها للمستخدمين الذين ينسونها", "en": "So the admin can look them up and send them to users who forget them" } },
+        { "id": "d", "text": { "ar": "حتى لا تنكشف كلمات المرور الأصلية لو تسربت قاعدة البيانات", "en": "So the original passwords aren't exposed if the database leaks" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "نستخدم خوارزميات مثل bcrypt التي يصعب عكسها وتضيف ملحًا (Salt) عشوائيًا.", "en": "We use algorithms like bcrypt that are hard to reverse and add a random salt." }
+    },
+    {
+      "id": "be9", "difficulty": "medium",
+      "q": { "ar": "في Express.js، ما الـ Middleware؟", "en": "In Express.js, what is middleware?" },
+      "options": [
+        { "id": "a", "text": { "ar": "قاعدة بيانات تقع بين الخادم والعميل", "en": "A database that sits between the server and the client" } },
+        { "id": "b", "text": { "ar": "دالة تعمل بين استقبال الطلب وإرسال الرد", "en": "A function that runs between the request and the response" } },
+        { "id": "c", "text": { "ar": "مكتبة واجهات أمامية تربط React بالخادم", "en": "A front-end library that connects React to the server" } },
+        { "id": "d", "text": { "ar": "جهاز شبكة فعلي يوزّع الطلبات بين عدة خوادم", "en": "A physical network device that balances traffic between several servers" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "يُستخدم للتحقق من الهوية وتسجيل الطلبات وقراءة JSON ومعالجة الأخطاء.", "en": "It is used for authentication, logging, parsing JSON and handling errors." }
+    },
+    {
+      "id": "be10", "difficulty": "medium",
+      "q": { "ar": "ماذا يعني REST في تصميم الـ APIs؟", "en": "What does REST mean in API design?" },
+      "options": [
+        { "id": "a", "text": { "ar": "محرك قواعد بيانات مصمم للقراءة السريعة", "en": "A database engine designed for fast reads" } },
+        { "id": "b", "text": { "ar": "لغة برمجة لكتابة كود الخوادم", "en": "A programming language for writing server code" } },
+        { "id": "c", "text": { "ar": "أسلوب معماري يعتمد على الموارد وطرق HTTP القياسية", "en": "An architectural style built on resources and standard HTTP methods" } },
+        { "id": "d", "text": { "ar": "بروتوكول أمان يشفّر كل البيانات بين العميل والخادم", "en": "A security protocol that encrypts all data between the client and server" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "مثلًا `GET /users` لجلب المستخدمين و `POST /users` لإضافة مستخدم.", "en": "For example `GET /users` lists users and `POST /users` adds one." }
+    },
+    {
+      "id": "be11", "difficulty": "hard",
+      "q": { "ar": "فيمَ يُستخدم JWT عادةً؟", "en": "What is a JWT commonly used for?" },
+      "options": [
+        { "id": "a", "text": { "ar": "إثبات هوية المستخدم في الطلبات برمز موقّع", "en": "Proving the user's identity in requests with a signed token" } },
+        { "id": "b", "text": { "ar": "تخزين صور المستخدمين وملفاتهم على الخادم", "en": "Storing user images and files on the server" } },
+        { "id": "c", "text": { "ar": "تشفير قاعدة البيانات كلها حتى لا يستطيع أحد قراءتها لو تسربت", "en": "Encrypting the whole database so that nobody can read it if it leaks" } },
+        { "id": "d", "text": { "ar": "عمل نسخ احتياطية يومية تلقائية من قاعدة البيانات", "en": "Making automatic daily backups of the database" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "الخادم يوقّع الرمز بمفتاح سري، فيستطيع لاحقًا التأكد أنه لم يُعدَّل.", "en": "The server signs the token with a secret key, so it can later verify it wasn't changed." }
+    },
+    {
+      "id": "be12", "difficulty": "hard",
+      "q": { "ar": "ما هجوم حقن SQL (SQL Injection)؟", "en": "What is an SQL injection attack?" },
+      "options": [
+        { "id": "a", "text": { "ar": "تحميل ملفات CSS إضافية في الصفحة لتغيير شكلها", "en": "Loading extra CSS files into a page to change its look" } },
+        { "id": "b", "text": { "ar": "إغراق الخادم بالطلبات حتى يتوقف عن الاستجابة", "en": "Flooding the server with requests until it stops responding" } },
+        { "id": "c", "text": { "ar": "إخفاء فيروس داخل الصور المرفوعة لإصابة الخادم", "en": "Hiding a virus inside uploaded images to infect the server" } },
+        { "id": "d", "text": { "ar": "إدخال أوامر SQL عبر مدخلات المستخدم للتلاعب بقاعدة البيانات", "en": "Sending SQL through user input to manipulate the database" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "الحل: الاستعلامات المُعدّة مسبقًا (Parameterized Queries) وعدم دمج المدخلات في النص مباشرة.", "en": "The fix: parameterised queries instead of pasting input into the query text." }
+    },
+    {
+      "id": "be13", "difficulty": "hard",
+      "q": { "ar": "ما فائدة الفهرس (Index) في قاعدة البيانات؟", "en": "What is a database index for?" },
+      "options": [
+        { "id": "a", "text": { "ar": "تشفير الأعمدة الحساسة في الجدول", "en": "Encrypting the sensitive columns in a table" } },
+        { "id": "b", "text": { "ar": "تسريع البحث مقابل مساحة تخزين إضافية", "en": "Speeding up searches, at the cost of extra storage" } },
+        { "id": "c", "text": { "ar": "الاحتفاظ بنسخة احتياطية تلقائية من كل جدول تحسبًا لأي عطل", "en": "Keeping an automatic backup copy of each table in case of failure" } },
+        { "id": "d", "text": { "ar": "ترتيب الصفوف على الشاشة للمستخدم", "en": "Sorting the rows on screen for the user" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "يشبه فهرس الكتاب: تصل للمعلومة بدون قراءة كل الصفحات.", "en": "Like a book's index: you reach the information without reading every page." }
+    },
+    {
+      "id": "be14", "difficulty": "hard",
+      "q": { "ar": "ما رمز الحالة المناسب بعد إنشاء مورد جديد بنجاح عبر POST؟", "en": "Which status code fits after successfully creating a resource with POST?" },
+      "options": [
+        { "id": "a", "text": { "ar": "200", "en": "200" } },
+        { "id": "b", "text": { "ar": "204", "en": "204" } },
+        { "id": "c", "text": { "ar": "201", "en": "201" } },
+        { "id": "d", "text": { "ar": "301", "en": "301" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "201 Created تعني أن موردًا جديدًا أُنشئ، و204 تعني نجاحًا بلا محتوى.", "en": "201 Created means a new resource was made; 204 means success with no content." }
+    },
+    {
+      "id": "be15", "difficulty": "hard",
+      "q": { "ar": "لماذا نستخدم متغيرات البيئة (`.env`) للمعلومات السرية؟", "en": "Why use environment variables (`.env`) for secrets?" },
+      "options": [
+        { "id": "a", "text": { "ar": "لإبقاء المفاتيح وكلمات المرور خارج الكود المصدري", "en": "To keep keys and passwords out of the source code" } },
+        { "id": "b", "text": { "ar": "لجعل الخادم يعمل أسرع عند النشر", "en": "To make the server run faster in production" } },
+        { "id": "c", "text": { "ar": "لتشفير الأسرار تلقائيًا داخل الكود", "en": "To encrypt the secrets automatically inside the code" } },
+        { "id": "d", "text": { "ar": "لأن Node.js لا تستطيع قراءة الأسرار من ملفات الكود", "en": "Because Node.js cannot read secrets from code files" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "وبذلك لا تُرفع الأسرار إلى GitHub، ويمكن تغييرها لكل بيئة تشغيل.", "en": "That way secrets never reach GitHub and can differ per environment." }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "be-t1", "level": "beginner",
+      "title": { "ar": "أول خادم Node.js", "en": "Your first Node.js server" },
+      "description": { "ar": "أنشئ خادمًا بـ Express فيه 3 مسارات تعيد JSON: `/hello` و `/time` و `/about`. أضف مسارًا يستقبل اسمًا في الرابط ويرحّب به.", "en": "Create an Express server with 3 routes that return JSON: `/hello`, `/time` and `/about`. Add a route that takes a name in the URL and greets it." },
+      "deliverable": { "ar": "رابط مستودع GitHub فيه README بخطوات التشغيل", "en": "A GitHub repository link with a README explaining how to run it" }
+    },
+    {
+      "id": "be-t2", "level": "beginner",
+      "title": { "ar": "واجهة CRUD للملاحظات", "en": "Notes CRUD API" },
+      "description": { "ar": "ابنِ API للملاحظات (إضافة، عرض، تعديل، حذف) تحفظ البيانات في ملف JSON، واختبر كل المسارات باستخدام Postman أو Thunder Client.", "en": "Build a notes API (create, list, update, delete) that saves data in a JSON file, and test every route with Postman or Thunder Client." },
+      "deliverable": { "ar": "رابط GitHub ومجموعة طلبات Postman أو لقطات شاشة", "en": "A GitHub link and a Postman collection or screenshots" }
+    },
+    {
+      "id": "be-t3", "level": "intermediate",
+      "title": { "ar": "ربط الواجهة بـ MongoDB", "en": "Connect the API to MongoDB" },
+      "description": { "ar": "انقل API الملاحظات إلى MongoDB باستخدام Mongoose، مع التحقق من صحة المدخلات ورسائل خطأ واضحة ورموز حالة صحيحة.", "en": "Move the notes API to MongoDB with Mongoose, with input validation, clear error messages and correct status codes." },
+      "deliverable": { "ar": "رابط GitHub مع ملف `.env.example`", "en": "A GitHub link including a `.env.example` file" }
+    },
+    {
+      "id": "be-t4", "level": "intermediate",
+      "title": { "ar": "تسجيل الدخول بـ JWT", "en": "Authentication with JWT" },
+      "description": { "ar": "أضف التسجيل وتسجيل الدخول مع تشفير كلمات المرور بـ bcrypt وإصدار JWT، واجعل كل مستخدم يرى ملاحظاته فقط.", "en": "Add register and login with bcrypt password hashing and JWT, and make each user see only their own notes." },
+      "deliverable": { "ar": "رابط GitHub وتوثيق مختصر للمسارات", "en": "A GitHub link and short route documentation" }
+    },
+    {
+      "id": "be-t5", "level": "advanced",
+      "title": { "ar": "الصلاحيات والتقسيم ومعالجة الأخطاء", "en": "Roles, pagination and error handling" },
+      "description": { "ar": "أضف دورين (مستخدم ومدير)، وتقسيم النتائج إلى صفحات (Pagination) مع البحث، و Middleware موحّد لمعالجة الأخطاء، ووثّق الـ API في README أو Swagger.", "en": "Add two roles (user and admin), pagination with search, a single error-handling middleware, and document the API in the README or Swagger." },
+      "deliverable": { "ar": "رابط GitHub وملف التوثيق", "en": "A GitHub link and the documentation" }
+    },
+    {
+      "id": "be-t6", "level": "advanced",
+      "title": { "ar": "نشر الـ API على الإنترنت", "en": "Deploy the API" },
+      "description": { "ar": "انشر الـ API على استضافة مجانية (مثل Render) مع قاعدة بيانات MongoDB Atlas ومتغيرات بيئة آمنة، وأضف مسار `/health` لفحص حالة الخادم.", "en": "Deploy the API on a free host (such as Render) with MongoDB Atlas and secure environment variables, and add a `/health` route." },
+      "deliverable": { "ar": "رابط الـ API المنشور ورابط GitHub", "en": "The live API link and the GitHub link" }
+    }
+  ],
+  "plans": {
+    "beginner": {
+      "title": { "ar": "خطة البداية في Back-end", "en": "Back-end starter plan" },
+      "summary": { "ar": "افهم كيف يعمل الويب وابنِ أول خادم بنفسك.", "en": "Understand how the web works and build your first server." },
+      "steps": [
+        { "id": "s1", "title": { "ar": "كيف يعمل الويب", "en": "How the web works" }, "details": { "ar": "العميل والخادم، HTTP، الطلبات والردود، ورموز الحالة، وصيغة JSON.", "en": "Client and server, HTTP, requests and responses, status codes and JSON." } },
+        { "id": "s2", "title": { "ar": "JavaScript و Node.js", "en": "JavaScript and Node.js" }, "details": { "ar": "أساسيات JavaScript ثم الوحدات و npm وقراءة الملفات وكتابتها في Node.", "en": "JavaScript basics, then modules, npm and reading and writing files in Node." } },
+        { "id": "s3", "title": { "ar": "Express", "en": "Express" }, "details": { "ar": "المسارات، الـ Middleware، وقراءة البيانات من الطلب. نفّذ المهمتين الأولى والثانية.", "en": "Routes, middleware and reading request data. Complete tasks 1 and 2." } },
+        { "id": "s4", "title": { "ar": "Git و GitHub", "en": "Git and GitHub" }, "details": { "ar": "ارفع كل مشروع مع README يشرح طريقة تشغيله.", "en": "Push every project with a README that explains how to run it." } }
+      ]
+    },
+    "intermediate": {
+      "title": { "ar": "خطة المستوى المتوسط في Back-end", "en": "Back-end intermediate plan" },
+      "summary": { "ar": "اربط خوادمك بقواعد البيانات وأمّنها.", "en": "Connect your servers to databases and secure them." },
+      "steps": [
+        { "id": "s1", "title": { "ar": "قواعد البيانات", "en": "Databases" }, "details": { "ar": "MongoDB مع Mongoose، وأساسيات SQL (SELECT و JOIN). نفّذ المهمة الثالثة.", "en": "MongoDB with Mongoose, plus SQL basics (SELECT and JOIN). Complete task 3." } },
+        { "id": "s2", "title": { "ar": "المصادقة", "en": "Authentication" }, "details": { "ar": "bcrypt و JWT وحماية المسارات. نفّذ المهمة الرابعة.", "en": "bcrypt, JWT and protected routes. Complete task 4." } },
+        { "id": "s3", "title": { "ar": "تصميم APIs جيدة", "en": "Good API design" }, "details": { "ar": "أسماء الموارد، رموز الحالة، التحقق من المدخلات، ورسائل الأخطاء.", "en": "Resource naming, status codes, input validation and error messages." } },
+        { "id": "s4", "title": { "ar": "أساسيات الأمان", "en": "Security basics" }, "details": { "ar": "اقرأ قائمة OWASP Top 10 وطبّق ما يناسب مشروعك.", "en": "Read the OWASP Top 10 and apply what fits your project." } }
+      ]
+    },
+    "advanced": {
+      "title": { "ar": "خطة المستوى المتقدم في Back-end", "en": "Back-end advanced plan" },
+      "summary": { "ar": "ابنِ أنظمة قابلة للنشر والتوسع والصيانة.", "en": "Build systems that are deployable, scalable and maintainable." },
+      "steps": [
+        { "id": "s1", "title": { "ar": "هيكلة المشروع", "en": "Project structure" }, "details": { "ar": "فصل المسارات والخدمات والنماذج، والصلاحيات والتقسيم إلى صفحات. نفّذ المهمة الخامسة.", "en": "Separate routes, services and models; add roles and pagination. Complete task 5." } },
+        { "id": "s2", "title": { "ar": "الاختبارات", "en": "Testing" }, "details": { "ar": "اختبارات الوحدة والتكامل باستخدام Jest أو Vitest مع Supertest.", "en": "Unit and integration tests with Jest or Vitest and Supertest." } },
+        { "id": "s3", "title": { "ar": "النشر", "en": "Deployment" }, "details": { "ar": "Render و MongoDB Atlas ومتغيرات البيئة وسجلات الأخطاء. نفّذ المهمة السادسة.", "en": "Render, MongoDB Atlas, environment variables and logs. Complete task 6." } },
+        { "id": "s4", "title": { "ar": "الأداء والتوسع", "en": "Performance and scale" }, "details": { "ar": "الفهارس، والتخزين المؤقت (Caching)، وأساسيات Docker.", "en": "Indexes, caching and Docker basics." } }
+      ]
+    }
+  },
+  "resources": [
+    { "title": "Node.js Learn", "url": "https://nodejs.org/en/learn", "lang": "en", "type": "docs" },
+    { "title": "Express.js", "url": "https://expressjs.com/", "lang": "en", "type": "docs" },
+    { "title": "MongoDB University", "url": "https://learn.mongodb.com/", "lang": "en", "type": "course" },
+    { "title": "Elzero Web School", "url": "https://www.youtube.com/@ElzeroWebSchool", "lang": "ar", "type": "video" },
+    { "title": "OWASP Top 10", "url": "https://owasp.org/www-project-top-ten/", "lang": "en", "type": "article" },
+    { "title": "Backend Roadmap", "url": "https://roadmap.sh/backend", "lang": "en", "type": "roadmap" }
+  ]
+}

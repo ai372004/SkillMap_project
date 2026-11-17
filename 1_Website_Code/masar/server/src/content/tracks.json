@@ -1,0 +1,93 @@
+[
+  {
+    "id": "uiux",
+    "icon": "🎨",
+    "color": "#7C3AED",
+    "name": {
+      "ar": "تصميم الواجهات وتجربة المستخدم",
+      "en": "UI/UX Design"
+    },
+    "short": {
+      "ar": "UI/UX",
+      "en": "UI/UX"
+    },
+    "description": {
+      "ar": "تصميم شكل التطبيقات والمواقع وطريقة استخدامها، بحيث تكون واضحة وسهلة ومريحة للناس.",
+      "en": "Designing how apps and websites look and work, so they are clear, easy and pleasant for people to use."
+    },
+    "tools": [
+      "Figma",
+      "FigJam",
+      "Maze"
+    ]
+  },
+  {
+    "id": "frontend",
+    "icon": "🖥️",
+    "color": "#1D5FD6",
+    "name": {
+      "ar": "تطوير الواجهات الأمامية",
+      "en": "Front-end Development"
+    },
+    "short": {
+      "ar": "Front-end",
+      "en": "Front-end"
+    },
+    "description": {
+      "ar": "تحويل التصميم إلى صفحات حقيقية تعمل في المتصفح وتتفاعل مع المستخدم.",
+      "en": "Turning designs into real pages that run in the browser and respond to the user."
+    },
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React"
+    ]
+  },
+  {
+    "id": "backend",
+    "icon": "🗄️",
+    "color": "#0A7568",
+    "name": {
+      "ar": "تطوير الأنظمة الخلفية",
+      "en": "Back-end Development"
+    },
+    "short": {
+      "ar": "Back-end",
+      "en": "Back-end"
+    },
+    "description": {
+      "ar": "بناء الخوادم وقواعد البيانات والمنطق الذي يشغّل التطبيق خلف الكواليس.",
+      "en": "Building the servers, databases and logic that run an app behind the scenes."
+    },
+    "tools": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "SQL"
+    ]
+  },
+  {
+    "id": "data",
+    "icon": "📊",
+    "color": "#B4560A",
+    "name": {
+      "ar": "علوم وتحليل البيانات",
+      "en": "Data Science & Analytics"
+    },
+    "short": {
+      "ar": "Data",
+      "en": "Data"
+    },
+    "description": {
+      "ar": "جمع البيانات وتنظيفها وتحليلها واستخراج نتائج تساعد في اتخاذ القرار.",
+      "en": "Collecting, cleaning and analysing data to find insights that support decisions."
+    },
+    "tools": [
+      "Python",
+      "pandas",
+      "SQL",
+      "Power BI"
+    ]
+  }
+]

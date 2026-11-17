@@ -1,0 +1,27 @@
+# Render blueprint: one web service that builds the React app and runs the API.
+# In the Render dashboard: New > Blueprint > pick this repository.
+services:
+  - type: web
+    name: masar
+    runtime: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: MONGO_URI
+        sync: false   # paste the MongoDB Atlas connection string in the dashboard
+      - key: CLIENT_URL
+        sync: false   # the service's own address, e.g. https://masar.onrender.com
+      - key: ADMIN_NAME
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false

@@ -1,0 +1,264 @@
+{
+  "track": "frontend",
+  "levelTest": [
+    {
+      "id": "fe1", "difficulty": "easy",
+      "q": { "ar": "إلى ماذا يشير الاختصار HTML؟", "en": "What does HTML stand for?" },
+      "options": [
+        { "id": "a", "text": { "ar": "HighText Machine Language", "en": "HighText Machine Language" } },
+        { "id": "b", "text": { "ar": "Home Tool Markup Language", "en": "Home Tool Markup Language" } },
+        { "id": "c", "text": { "ar": "HyperText Markup Language", "en": "HyperText Markup Language" } },
+        { "id": "d", "text": { "ar": "Hyperlink Text Machine Language", "en": "Hyperlink Text Machine Language" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "HTML لغة ترميز تحدد هيكل صفحة الويب ومحتواها.", "en": "HTML is a markup language that defines the structure and content of a web page." }
+    },
+    {
+      "id": "fe2", "difficulty": "easy",
+      "q": { "ar": "أي لغة تُستخدم لتنسيق شكل صفحة الويب؟", "en": "Which language is used to style a web page?" },
+      "options": [
+        { "id": "a", "text": { "ar": "CSS", "en": "CSS" } },
+        { "id": "b", "text": { "ar": "SQL", "en": "SQL" } },
+        { "id": "c", "text": { "ar": "Python", "en": "Python" } },
+        { "id": "d", "text": { "ar": "HTML", "en": "HTML" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "CSS مسؤولة عن الألوان والخطوط والتخطيط والمسافات.", "en": "CSS controls colours, fonts, layout and spacing." }
+    },
+    {
+      "id": "fe3", "difficulty": "easy",
+      "q": { "ar": "أي وسم HTML يُستخدم لإنشاء رابط؟", "en": "Which HTML tag creates a link?" },
+      "options": [
+        { "id": "a", "text": { "ar": "<link>", "en": "<link>" } },
+        { "id": "b", "text": { "ar": "<href>", "en": "<href>" } },
+        { "id": "c", "text": { "ar": "<url>", "en": "<url>" } },
+        { "id": "d", "text": { "ar": "<a>", "en": "<a>" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "الوسم <a> مع الخاصية href ينشئ رابطًا. أما <link> فيربط ملفات مثل CSS.", "en": "<a> with an href attribute makes a link. <link> connects files such as CSS." }
+    },
+    {
+      "id": "fe4", "difficulty": "easy",
+      "q": { "ar": "أي خاصية CSS تغيّر لون النص؟", "en": "Which CSS property changes the text colour?" },
+      "options": [
+        { "id": "a", "text": { "ar": "font-color", "en": "font-color" } },
+        { "id": "b", "text": { "ar": "color", "en": "color" } },
+        { "id": "c", "text": { "ar": "text-color", "en": "text-color" } },
+        { "id": "d", "text": { "ar": "background", "en": "background" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "الخاصية color تحدد لون النص، و background تحدد الخلفية.", "en": "color sets the text colour; background sets the background." }
+    },
+    {
+      "id": "fe5", "difficulty": "easy",
+      "q": { "ar": "في JavaScript الحديثة، كيف تعرّف متغيرًا لن يُعاد إسناد قيمته؟", "en": "In modern JavaScript, how do you declare a variable that won't be reassigned?" },
+      "options": [
+        { "id": "a", "text": { "ar": "let", "en": "let" } },
+        { "id": "b", "text": { "ar": "var", "en": "var" } },
+        { "id": "c", "text": { "ar": "const", "en": "const" } },
+        { "id": "d", "text": { "ar": "static", "en": "static" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "const يمنع إعادة الإسناد، بينما let و var يسمحان بها.", "en": "const prevents reassignment; let and var allow it." }
+    },
+    {
+      "id": "fe6", "difficulty": "medium",
+      "q": { "ar": "ماذا تفعل القاعدة `display: flex`؟", "en": "What does `display: flex` do?" },
+      "options": [
+        { "id": "a", "text": { "ar": "ترتّب العناصر الموجودة داخله في صف أو عمود", "en": "Lays out the element's children in a row or column" } },
+        { "id": "b", "text": { "ar": "تخفي العنصر مع الإبقاء على المساحة التي يشغلها", "en": "Hides the element but keeps the space it takes up" } },
+        { "id": "c", "text": { "ar": "تجعل العنصر يطفو إلى اليسار ليلتف النص حوله", "en": "Makes the element float left so text wraps around it" } },
+        { "id": "d", "text": { "ar": "تضيف حركة ناعمة كلما تغيّر حجم العنصر", "en": "Adds a smooth animation whenever the element changes size" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "Flexbox يسهّل المحاذاة وتوزيع المسافات بين العناصر.", "en": "Flexbox makes alignment and spacing between items easy." }
+    },
+    {
+      "id": "fe7", "difficulty": "medium",
+      "q": { "ar": "ما نتيجة `typeof []` في JavaScript؟", "en": "What is the result of `typeof []` in JavaScript?" },
+      "options": [
+        { "id": "a", "text": { "ar": "\"array\"", "en": "\"array\"" } },
+        { "id": "b", "text": { "ar": "\"list\"", "en": "\"list\"" } },
+        { "id": "c", "text": { "ar": "\"undefined\"", "en": "\"undefined\"" } },
+        { "id": "d", "text": { "ar": "\"object\"", "en": "\"object\"" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "المصفوفات كائنات في JavaScript، ونستخدم `Array.isArray()` للتحقق منها.", "en": "Arrays are objects in JavaScript; use `Array.isArray()` to check for one." }
+    },
+    {
+      "id": "fe8", "difficulty": "medium",
+      "q": { "ar": "أي دالة تضيف عنصرًا إلى نهاية المصفوفة؟", "en": "Which method adds an element to the end of an array?" },
+      "options": [
+        { "id": "a", "text": { "ar": "pop()", "en": "pop()" } },
+        { "id": "b", "text": { "ar": "push()", "en": "push()" } },
+        { "id": "c", "text": { "ar": "shift()", "en": "shift()" } },
+        { "id": "d", "text": { "ar": "unshift()", "en": "unshift()" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "push تضيف للنهاية، و pop تحذف من النهاية، و unshift تضيف للبداية.", "en": "push adds to the end, pop removes from the end, unshift adds to the start." }
+    },
+    {
+      "id": "fe9", "difficulty": "medium",
+      "q": { "ar": "ما الـ DOM؟", "en": "What is the DOM?" },
+      "options": [
+        { "id": "a", "text": { "ar": "قاعدة بيانات صغيرة داخل المتصفح يحفظ فيها كل موقع بياناته", "en": "A small database inside the browser where each website stores its own data" } },
+        { "id": "b", "text": { "ar": "إطار عمل CSS يوفر تخطيطات جاهزة للصفحات", "en": "A CSS framework that provides ready-made page layouts" } },
+        { "id": "c", "text": { "ar": "تمثيل شجري لعناصر الصفحة تستطيع JavaScript قراءته وتعديله", "en": "A tree representation of the page that JavaScript can read and change" } },
+        { "id": "d", "text": { "ar": "الخادم الذي يستضيف ملفات الموقع", "en": "The server that hosts the site's files" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "من خلال الـ DOM نضيف العناصر ونغيّر النصوص ونستمع للأحداث.", "en": "Through the DOM we add elements, change text and listen for events." }
+    },
+    {
+      "id": "fe10", "difficulty": "medium",
+      "q": { "ar": "في React، ما الـ props؟", "en": "In React, what are props?" },
+      "options": [
+        { "id": "a", "text": { "ar": "أنماط عامة تشترك فيها كل مكونات التطبيق", "en": "Global styles shared by every component in the app" } },
+        { "id": "b", "text": { "ar": "بيانات يحتفظ بها المكوّن ويغيّرها بنفسه", "en": "Data a component keeps and changes by itself" } },
+        { "id": "c", "text": { "ar": "قيم يحفظها المتصفح كملفات تعريف ارتباط للمستخدم", "en": "Values the browser saves as cookies for the user" } },
+        { "id": "d", "text": { "ar": "مدخلات يمررها المكوّن الأب إلى المكوّن الابن", "en": "Inputs passed from a parent component to a child" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "الـ props للقراءة فقط داخل المكوّن الابن، أما الحالة المتغيرة فنستخدم لها state.", "en": "Props are read-only inside the child; changing data uses state." }
+    },
+    {
+      "id": "fe11", "difficulty": "hard",
+      "q": { "ar": "ماذا يقارن العامل `===` في JavaScript؟", "en": "What does the `===` operator compare in JavaScript?" },
+      "options": [
+        { "id": "a", "text": { "ar": "القيمة والنوع معًا دون تحويل", "en": "Value and type together, with no conversion" } },
+        { "id": "b", "text": { "ar": "القيمة فقط، بعد تحويل الطرفين إلى النوع نفسه", "en": "Only the value, after converting both sides to the same type" } },
+        { "id": "c", "text": { "ar": "يُسند قيمة لمتغير", "en": "It assigns a value to a variable" } },
+        { "id": "d", "text": { "ar": "يقارن أطوال النصوص فقط", "en": "It only compares string lengths" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "مثلًا `5 == \"5\"` تعطي `true`، لكن `5 === \"5\"` تعطي `false`.", "en": "For example `5 == \"5\"` is `true`, but `5 === \"5\"` is `false`." }
+    },
+    {
+      "id": "fe12", "difficulty": "hard",
+      "q": { "ar": "متى يعمل `useEffect(() => {...}, [])` في React؟", "en": "When does `useEffect(() => {...}, [])` run in React?" },
+      "options": [
+        { "id": "a", "text": { "ar": "بعد كل إعادة رسم للمكوّن", "en": "After every render of the component" } },
+        { "id": "b", "text": { "ar": "مرة واحدة بعد أول ظهور للمكوّن", "en": "Once, after the component first renders" } },
+        { "id": "c", "text": { "ar": "مرة واحدة قبل أول ظهور للمكوّن", "en": "Once, before the component first renders" } },
+        { "id": "d", "text": { "ar": "فقط عندما يضغط المستخدم على المكوّن", "en": "Only when the user clicks the component" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "المصفوفة الفارغة تعني عدم وجود اعتماديات، فيعمل مرة واحدة عند التركيب (وقد يعمل مرتين في وضع التطوير StrictMode).", "en": "An empty array means no dependencies, so it runs once on mount (twice in development StrictMode)." }
+    },
+    {
+      "id": "fe13", "difficulty": "hard",
+      "q": { "ar": "ما الفرق الأساسي بين let و var؟", "en": "What is the main difference between let and var?" },
+      "options": [
+        { "id": "a", "text": { "ar": "لا يوجد فرق", "en": "There is no difference" } },
+        { "id": "b", "text": { "ar": "var نطاقها الكتلة، و let نطاقها الدالة", "en": "var is block-scoped and let is function-scoped" } },
+        { "id": "c", "text": { "ar": "let نطاقها الكتلة { }، و var نطاقها الدالة", "en": "let is block-scoped { }, var is function-scoped" } },
+        { "id": "d", "text": { "ar": "let لا يمكن تغيير قيمتها", "en": "let cannot be changed" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "متغير let المعرّف داخل if أو for لا يُرى خارجها، بعكس var.", "en": "A let variable declared inside an if or for block is not visible outside it, unlike var." }
+    },
+    {
+      "id": "fe14", "difficulty": "hard",
+      "q": { "ar": "أي محدد CSS له أعلى أولوية (Specificity)؟", "en": "Which CSS selector has the highest specificity?" },
+      "options": [
+        { "id": "a", "text": { "ar": ".header", "en": ".header" } },
+        { "id": "b", "text": { "ar": "header", "en": "header" } },
+        { "id": "c", "text": { "ar": "*", "en": "*" } },
+        { "id": "d", "text": { "ar": "#header", "en": "#header" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "ترتيب الأولوية: المعرّف `#` ثم الفئة `.` ثم اسم العنصر ثم المحدد العام `*`.", "en": "Order: id `#`, then class `.`, then element name, then the universal selector `*`." }
+    },
+    {
+      "id": "fe15", "difficulty": "hard",
+      "q": { "ar": "ما القيمة التي يعيدها `[1, 2, 3].map(n => n * 2)`؟", "en": "What does `[1, 2, 3].map(n => n * 2)` return?" },
+      "options": [
+        { "id": "a", "text": { "ar": "[2, 4, 6]", "en": "[2, 4, 6]" } },
+        { "id": "b", "text": { "ar": "12", "en": "12" } },
+        { "id": "c", "text": { "ar": "[1, 2, 3]", "en": "[1, 2, 3]" } },
+        { "id": "d", "text": { "ar": "undefined", "en": "undefined" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "map تنشئ مصفوفة جديدة بنتيجة الدالة على كل عنصر ولا تغيّر الأصلية.", "en": "map creates a new array with the function applied to each item and leaves the original unchanged." }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "fe-t1", "level": "beginner",
+      "title": { "ar": "صفحة تعريفية شخصية", "en": "Personal profile page" },
+      "description": { "ar": "ابنِ صفحة تعريفية عنك باستخدام HTML و CSS فقط: صورة، نبذة، مهارات، وروابط تواصل. استخدم وسومًا دلالية (header, main, section, footer) واجعلها تعمل على الهاتف.", "en": "Build a page about yourself with HTML and CSS only: photo, bio, skills and contact links. Use semantic tags (header, main, section, footer) and make it work on mobile." },
+      "deliverable": { "ar": "رابط مستودع GitHub ورابط الصفحة على GitHub Pages", "en": "A GitHub repository link and a GitHub Pages link" }
+    },
+    {
+      "id": "fe-t2", "level": "beginner",
+      "title": { "ar": "قائمة مهام تفاعلية", "en": "Interactive to-do list" },
+      "description": { "ar": "باستخدام JavaScript فقط: إضافة مهمة، حذفها، تعليمها كمكتملة، وحفظ القائمة في localStorage حتى لا تضيع عند تحديث الصفحة.", "en": "With plain JavaScript: add a task, delete it, mark it done, and save the list in localStorage so it survives a page refresh." },
+      "deliverable": { "ar": "رابط GitHub ورابط النسخة المنشورة", "en": "A GitHub link and a live link" }
+    },
+    {
+      "id": "fe-t3", "level": "intermediate",
+      "title": { "ar": "صفحة هبوط متجاوبة من تصميم Figma", "en": "Responsive landing page from a Figma design" },
+      "description": { "ar": "اختر تصميم صفحة هبوط مجاني من Figma Community ونفّذه بدقة باستخدام Flexbox و Grid، بأسلوب Mobile-first، مع قائمة تنقل تعمل على الهاتف.", "en": "Pick a free landing page design from Figma Community and build it accurately with Flexbox and Grid, mobile-first, with a navigation menu that works on phones." },
+      "deliverable": { "ar": "رابط النسخة المنشورة ورابط التصميم الأصلي", "en": "A live link and the original design link" }
+    },
+    {
+      "id": "fe-t4", "level": "intermediate",
+      "title": { "ar": "تطبيق يستهلك API عامة", "en": "App that consumes a public API" },
+      "description": { "ar": "ابنِ تطبيق طقس أو اقتباسات أو أفلام يجلب البيانات من API عامة باستخدام fetch و async/await، مع حالات التحميل والخطأ والبحث.", "en": "Build a weather, quotes or movies app that fetches data from a public API with fetch and async/await, including loading, error and search states." },
+      "deliverable": { "ar": "رابط GitHub ورابط النسخة المنشورة", "en": "A GitHub link and a live link" }
+    },
+    {
+      "id": "fe-t5", "level": "advanced",
+      "title": { "ar": "تطبيق React متعدد الصفحات", "en": "Multi-page React app" },
+      "description": { "ar": "ابنِ كتالوج دورات مصغّر بـ React و React Router: صفحة قائمة مع بحث وتصفية، وصفحة تفاصيل، ومفضلة محفوظة. قسّم الواجهة إلى مكونات قابلة لإعادة الاستخدام.", "en": "Build a mini course catalogue with React and React Router: a list page with search and filters, a details page and saved favourites. Split the UI into reusable components." },
+      "deliverable": { "ar": "رابط GitHub ورابط النسخة المنشورة على Vercel أو Netlify", "en": "A GitHub link and a live link on Vercel or Netlify" }
+    },
+    {
+      "id": "fe-t6", "level": "advanced",
+      "title": { "ar": "تدقيق الأداء وإمكانية الوصول", "en": "Performance and accessibility audit" },
+      "description": { "ar": "شغّل Lighthouse على أحد مشروعاتك، وسجّل النتائج، ثم أصلح المشكلات (الصور، التباين، النصوص البديلة، الترتيب الدلالي) وقارن النتائج قبل وبعد.", "en": "Run Lighthouse on one of your projects, record the scores, fix the issues (images, contrast, alt text, semantic order) and compare before and after." },
+      "deliverable": { "ar": "تقرير قصير بلقطات الشاشة قبل وبعد ورابط المشروع", "en": "A short report with before/after screenshots and the project link" }
+    }
+  ],
+  "plans": {
+    "beginner": {
+      "title": { "ar": "خطة البداية في Front-end", "en": "Front-end starter plan" },
+      "summary": { "ar": "ابنِ أساسًا قويًا في HTML و CSS و JavaScript قبل أي إطار عمل.", "en": "Build a strong base in HTML, CSS and JavaScript before any framework." },
+      "steps": [
+        { "id": "s1", "title": { "ar": "HTML الدلالية", "en": "Semantic HTML" }, "details": { "ar": "العناوين، القوائم، النماذج، الصور، والوسوم الدلالية. نفّذ المهمة الأولى.", "en": "Headings, lists, forms, images and semantic tags. Complete task 1." } },
+        { "id": "s2", "title": { "ar": "CSS والتخطيط", "en": "CSS and layout" }, "details": { "ar": "نموذج الصندوق، Flexbox، Grid، ووحدات القياس، واستعلامات الوسائط للتجاوب.", "en": "The box model, Flexbox, Grid, units and media queries for responsiveness." } },
+        { "id": "s3", "title": { "ar": "أساسيات JavaScript", "en": "JavaScript basics" }, "details": { "ar": "المتغيرات، الشروط، الحلقات، الدوال، المصفوفات، والتعامل مع الـ DOM والأحداث. نفّذ المهمة الثانية.", "en": "Variables, conditions, loops, functions, arrays, and working with the DOM and events. Complete task 2." } },
+        { "id": "s4", "title": { "ar": "Git و GitHub", "en": "Git and GitHub" }, "details": { "ar": "احفظ كل مشروع في مستودع، وانشر صفحاتك على GitHub Pages.", "en": "Keep every project in a repository and publish your pages on GitHub Pages." } }
+      ]
+    },
+    "intermediate": {
+      "title": { "ar": "خطة المستوى المتوسط في Front-end", "en": "Front-end intermediate plan" },
+      "summary": { "ar": "حوّل التصاميم إلى صفحات دقيقة وتعامل مع البيانات الحقيقية.", "en": "Turn designs into accurate pages and work with real data." },
+      "steps": [
+        { "id": "s1", "title": { "ar": "من التصميم إلى الكود", "en": "Design to code" }, "details": { "ar": "اقرأ ملفات Figma (المسافات والخطوط والألوان) ونفّذ المهمة الثالثة بدقة.", "en": "Read Figma files (spacing, type, colours) and build task 3 accurately." } },
+        { "id": "s2", "title": { "ar": "JavaScript غير المتزامنة", "en": "Asynchronous JavaScript" }, "details": { "ar": "Promises و fetch و async/await ومعالجة الأخطاء. نفّذ المهمة الرابعة.", "en": "Promises, fetch, async/await and error handling. Complete task 4." } },
+        { "id": "s3", "title": { "ar": "ES6+ الحديثة", "en": "Modern ES6+" }, "details": { "ar": "Destructuring، Spread، الوحدات (Modules)، ودوال المصفوفات مثل map و filter و reduce.", "en": "Destructuring, spread, modules and array methods like map, filter and reduce." } },
+        { "id": "s4", "title": { "ar": "ابدأ مع React", "en": "Start with React" }, "details": { "ar": "المكونات، الـ props، الـ state، والأحداث من الوثائق الرسمية react.dev.", "en": "Components, props, state and events from the official react.dev docs." } }
+      ]
+    },
+    "advanced": {
+      "title": { "ar": "خطة المستوى المتقدم في Front-end", "en": "Front-end advanced plan" },
+      "summary": { "ar": "ابنِ تطبيقات React كاملة بجودة الإنتاج.", "en": "Build complete React apps at production quality." },
+      "steps": [
+        { "id": "s1", "title": { "ar": "React بعمق", "en": "React in depth" }, "details": { "ar": "Hooks (useEffect, useContext, useReducer)، React Router، وإدارة الحالة. نفّذ المهمة الخامسة.", "en": "Hooks (useEffect, useContext, useReducer), React Router and state management. Complete task 5." } },
+        { "id": "s2", "title": { "ar": "الأداء وإمكانية الوصول", "en": "Performance and accessibility" }, "details": { "ar": "Lighthouse، تحميل الصور الكسول، وتقسيم الكود، ومعايير WCAG. نفّذ المهمة السادسة.", "en": "Lighthouse, lazy-loading images, code splitting and WCAG. Complete task 6." } },
+        { "id": "s3", "title": { "ar": "أدوات احترافية", "en": "Professional tooling" }, "details": { "ar": "TypeScript أساسيات، و ESLint، والاختبارات بـ Vitest أو Testing Library.", "en": "TypeScript basics, ESLint, and testing with Vitest or Testing Library." } },
+        { "id": "s4", "title": { "ar": "معرض الأعمال", "en": "Portfolio" }, "details": { "ar": "انشر 3 مشروعات قوية مع ملف README واضح لكل مشروع.", "en": "Publish 3 strong projects, each with a clear README." } }
+      ]
+    }
+  },
+  "resources": [
+    { "title": "MDN Web Docs", "url": "https://developer.mozilla.org/", "lang": "en", "type": "docs" },
+    { "title": "Elzero Web School", "url": "https://www.youtube.com/@ElzeroWebSchool", "lang": "ar", "type": "video" },
+    { "title": "موسوعة حسوب", "url": "https://wiki.hsoub.com/", "lang": "ar", "type": "docs" },
+    { "title": "freeCodeCamp", "url": "https://www.freecodecamp.org/learn", "lang": "en", "type": "course" },
+    { "title": "The Modern JavaScript Tutorial", "url": "https://javascript.info/", "lang": "en", "type": "docs" },
+    { "title": "React Docs", "url": "https://react.dev/learn", "lang": "en", "type": "docs" },
+    { "title": "Frontend Roadmap", "url": "https://roadmap.sh/frontend", "lang": "en", "type": "roadmap" }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "track": "uiux",
+  "levelTest": [
+    {
+      "id": "ux1", "difficulty": "easy",
+      "q": { "ar": "إلى ماذا يشير الاختصار UX؟", "en": "What does \"UX\" stand for?" },
+      "options": [
+        { "id": "a", "text": { "ar": "User Extension", "en": "User Extension" } },
+        { "id": "b", "text": { "ar": "User Experience (تجربة المستخدم)", "en": "User Experience" } },
+        { "id": "c", "text": { "ar": "Universal Exchange", "en": "Universal Exchange" } },
+        { "id": "d", "text": { "ar": "Unified Execution", "en": "Unified Execution" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "UX هي تجربة المستخدم: كل ما يشعر به المستخدم أثناء استخدام المنتج.", "en": "UX is User Experience: everything a person feels while using a product." }
+    },
+    {
+      "id": "ux2", "difficulty": "easy",
+      "q": { "ar": "أي أداة تُستخدم أساسًا لتصميم الواجهات والنماذج الأولية؟", "en": "Which tool is mainly used to design interfaces and prototypes?" },
+      "options": [
+        { "id": "a", "text": { "ar": "MySQL", "en": "MySQL" } },
+        { "id": "b", "text": { "ar": "Postman", "en": "Postman" } },
+        { "id": "c", "text": { "ar": "Figma", "en": "Figma" } },
+        { "id": "d", "text": { "ar": "Excel", "en": "Excel" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "Figma أداة تصميم واجهات ونماذج أولية تعمل في المتصفح وتدعم العمل الجماعي.", "en": "Figma is a browser-based interface design and prototyping tool built for teamwork." }
+    },
+    {
+      "id": "ux3", "difficulty": "easy",
+      "q": { "ar": "ما المقصود بالـ Wireframe؟", "en": "What is a wireframe?" },
+      "options": [
+        { "id": "a", "text": { "ar": "مخطط مبسّط للشاشة يوضح الهيكل وترتيب العناصر", "en": "A simple screen layout showing structure and element placement" } },
+        { "id": "b", "text": { "ar": "تصميم نهائي عالي الدقة بالألوان والصور النهائية", "en": "A finished, high-fidelity mockup with final colours and images" } },
+        { "id": "c", "text": { "ar": "دليل الهوية الذي يحدد ألوان العلامة وخطوطها وقواعد الشعار", "en": "The style guide listing the brand's colours, fonts and logo rules" } },
+        { "id": "d", "text": { "ar": "كود الواجهة الأمامية الذي يبني هيكل الصفحة بلغة HTML", "en": "The front-end code that builds the page structure in HTML" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "الـ Wireframe نسخة منخفضة الدقة تركز على الهيكل قبل الألوان والتفاصيل.", "en": "A wireframe is a low-fidelity version that focuses on structure before colours and details." }
+    },
+    {
+      "id": "ux4", "difficulty": "easy",
+      "q": { "ar": "لماذا يستخدم المصممون المساحات البيضاء (Whitespace)؟", "en": "Why do designers use whitespace?" },
+      "options": [
+        { "id": "a", "text": { "ar": "لتقليل حجم الملف وجعل الصفحة تُحمَّل أسرع", "en": "To reduce the file size and make pages load faster" } },
+        { "id": "b", "text": { "ar": "لإخفاء محتوى لا يحتاجه إلا بعض المستخدمين", "en": "To hide content that only some users need to see" } },
+        { "id": "c", "text": { "ar": "لملء الشاشة عندما لا يكون هناك محتوى كافٍ لعرضه", "en": "To fill the screen when there is not enough content to show" } },
+        { "id": "d", "text": { "ar": "لتحسين القراءة وتوجيه انتباه المستخدم", "en": "To improve readability and guide the user's attention" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "المسافات تفصل العناصر وتريح العين وتبرز المحتوى المهم.", "en": "Space separates elements, rests the eye and highlights what matters." }
+    },
+    {
+      "id": "ux5", "difficulty": "easy",
+      "q": { "ar": "ما الـ Persona في تجربة المستخدم؟", "en": "What is a persona in UX?" },
+      "options": [
+        { "id": "a", "text": { "ar": "الملف الشخصي للمصمم الذي يوقّع به الملفات النهائية", "en": "The designer's own profile, used to sign the final files" } },
+        { "id": "b", "text": { "ar": "شخصية افتراضية تمثل فئة من المستخدمين بناءً على البحث", "en": "A fictional character representing a group of users, based on research" } },
+        { "id": "c", "text": { "ar": "الشخصية الكرتونية للعلامة التي تظهر في إعلاناتها", "en": "The brand's mascot that appears in its marketing" } },
+        { "id": "d", "text": { "ar": "عميل حقيقي يختاره الفريق ليراجع كل قرار تصميم ويوافق عليه", "en": "A real customer the team chooses to review and approve every design decision" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "الـ Persona تساعد الفريق على تذكر احتياجات المستخدم الحقيقي وأهدافه.", "en": "A persona keeps the team focused on real users' needs and goals." }
+    },
+    {
+      "id": "ux6", "difficulty": "medium",
+      "q": { "ar": "أي قانون يقول إن المستخدمين يفضلون أن يعمل موقعك مثل المواقع التي اعتادوا عليها؟", "en": "Which law says users prefer your site to work like the sites they already know?" },
+      "options": [
+        { "id": "a", "text": { "ar": "قانون فيتس (Fitts)", "en": "Fitts's Law" } },
+        { "id": "b", "text": { "ar": "قانون هيك (Hick)", "en": "Hick's Law" } },
+        { "id": "c", "text": { "ar": "قانون جاكوب (Jakob)", "en": "Jakob's Law" } },
+        { "id": "d", "text": { "ar": "قانون ميلر (Miller)", "en": "Miller's Law" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "قانون جاكوب: المستخدم يقضي معظم وقته في مواقع أخرى، فيتوقع أن يعمل موقعك بالطريقة نفسها.", "en": "Jakob's Law: users spend most of their time on other sites, so they expect yours to work the same way." }
+    },
+    {
+      "id": "ux7", "difficulty": "medium",
+      "q": { "ar": "ماذا يقترح قانون فيتس (Fitts's Law)؟", "en": "What does Fitts's Law suggest?" },
+      "options": [
+        { "id": "a", "text": { "ar": "أن تكون الأزرار المهمة كبيرة وسهلة الوصول", "en": "Important buttons should be large and easy to reach" } },
+        { "id": "b", "text": { "ar": "أن تستخدم الواجهة أقل عدد ممكن من الألوان في كل شاشة", "en": "Interfaces should use as few colours as possible on each screen" } },
+        { "id": "c", "text": { "ar": "ألا تحتوي القوائم على أكثر من سبعة عناصر أبدًا", "en": "Menus should never contain more than seven items" } },
+        { "id": "d", "text": { "ar": "أن يكون نص الفقرات في منتصف الصفحة دائمًا", "en": "Body text should always be centred on the page" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "زمن الوصول لهدف يعتمد على حجمه وبُعده، فالهدف الأكبر والأقرب أسرع.", "en": "Time to reach a target depends on its size and distance, so bigger and closer is faster." }
+    },
+    {
+      "id": "ux8", "difficulty": "medium",
+      "q": { "ar": "ما الهدف الأساسي من اختبار قابلية الاستخدام (Usability Testing)؟", "en": "What is the main goal of usability testing?" },
+      "options": [
+        { "id": "a", "text": { "ar": "تشغيل الكود لاكتشاف الأخطاء البرمجية قبل الإطلاق", "en": "Running the code to find bugs before release" } },
+        { "id": "b", "text": { "ar": "قياس سرعة استجابة الخادم تحت الضغط", "en": "Measuring how fast the server responds under load" } },
+        { "id": "c", "text": { "ar": "سؤال المستخدمين عن الألوان والأشكال التي يفضلونها", "en": "Asking users which colours and styles they like most" } },
+        { "id": "d", "text": { "ar": "ملاحظة مستخدمين حقيقيين أثناء أداء مهام لاكتشاف المشكلات", "en": "Watching real users perform tasks to find problems" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "مشاهدة المستخدم وهو يحاول تكشف مواضع الحيرة التي لا يراها المصمم.", "en": "Watching users try things reveals confusion the designer cannot see." }
+    },
+    {
+      "id": "ux9", "difficulty": "medium",
+      "q": { "ar": "ما الحد الأدنى لنسبة التباين للنص العادي حسب معيار WCAG AA؟", "en": "What is the minimum contrast ratio for normal text under WCAG AA?" },
+      "options": [
+        { "id": "a", "text": { "ar": "2:1", "en": "2:1" } },
+        { "id": "b", "text": { "ar": "4.5:1", "en": "4.5:1" } },
+        { "id": "c", "text": { "ar": "3:1", "en": "3:1" } },
+        { "id": "d", "text": { "ar": "10:1", "en": "10:1" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "4.5:1 للنص العادي، و3:1 للنص الكبير، و7:1 لمستوى AAA.", "en": "4.5:1 for normal text, 3:1 for large text, and 7:1 for level AAA." }
+    },
+    {
+      "id": "ux10", "difficulty": "medium",
+      "q": { "ar": "ما نظام التصميم (Design System)؟", "en": "What is a design system?" },
+      "options": [
+        { "id": "a", "text": { "ar": "برنامج يشغّل أدوات التصميم على الحاسوب", "en": "A program that runs design tools on the computer" } },
+        { "id": "b", "text": { "ar": "أداة لتنظيم المهام والمواعيد في فريق التصميم", "en": "A tool for planning tasks and deadlines in a design team" } },
+        { "id": "c", "text": { "ar": "مجموعة مكونات وأنماط وإرشادات قابلة لإعادة الاستخدام", "en": "A collection of reusable components, styles and guidelines" } },
+        { "id": "d", "text": { "ar": "مجلد مشترك يضم كل الشاشات المصممة لمشروع واحد", "en": "A shared folder holding all the screens designed for one project" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "يوحّد شكل المنتج ويسرّع العمل لأن الفريق يعيد استخدام نفس المكونات.", "en": "It keeps a product consistent and speeds up work because the team reuses the same parts." }
+    },
+    {
+      "id": "ux11", "difficulty": "hard",
+      "q": { "ar": "ماذا ينص قانون هيك (Hick's Law)؟", "en": "What does Hick's Law state?" },
+      "options": [
+        { "id": "a", "text": { "ar": "زمن اتخاذ القرار يزيد بزيادة عدد الخيارات وتعقيدها", "en": "Decision time increases with the number and complexity of choices" } },
+        { "id": "b", "text": { "ar": "الأهداف الأكبر والأقرب أسرع في الضغط عليها", "en": "Larger, closer targets are faster to click" } },
+        { "id": "c", "text": { "ar": "المستخدمون يتصفحون صفحات الويب على شكل حرف F", "en": "Users scan web pages in an F-shaped pattern" } },
+        { "id": "d", "text": { "ar": "الإنسان يحتفظ بنحو سبعة عناصر في ذاكرته القصيرة في الوقت نفسه", "en": "People can hold about seven items in their short-term memory at once" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "لذلك نقلل الخيارات أو نقسمها إلى خطوات حتى لا يتردد المستخدم.", "en": "That is why we reduce choices or split them into steps so users don't hesitate." }
+    },
+    {
+      "id": "ux12", "difficulty": "hard",
+      "q": { "ar": "ما ترتيب المراحل الأربع في نموذج الماسة المزدوجة (Double Diamond)؟", "en": "What is the order of the four phases in the Double Diamond model?" },
+      "options": [
+        { "id": "a", "text": { "ar": "Design، Develop، Debug، Deploy", "en": "Design, Develop, Debug, Deploy" } },
+        { "id": "b", "text": { "ar": "Define، Discover، Deliver، Develop", "en": "Define, Discover, Deliver, Develop" } },
+        { "id": "c", "text": { "ar": "Research، Sketch، Code، Test", "en": "Research, Sketch, Code, Test" } },
+        { "id": "d", "text": { "ar": "Discover، Define، Develop، Deliver", "en": "Discover, Define, Develop, Deliver" } }
+      ],
+      "answer": "d",
+      "explain": { "ar": "الماسة الأولى لفهم المشكلة (اكتشاف ثم تحديد)، والثانية لحلها (تطوير ثم تسليم).", "en": "The first diamond understands the problem (discover, define), the second solves it (develop, deliver)." }
+    },
+    {
+      "id": "ux13", "difficulty": "hard",
+      "q": { "ar": "فيمَ يُستخدم أسلوب فرز البطاقات (Card Sorting) أساسًا؟", "en": "What is card sorting mainly used for?" },
+      "options": [
+        { "id": "a", "text": { "ar": "اختيار لوحة ألوان تناسب هوية العلامة", "en": "Choosing a colour palette that matches the brand" } },
+        { "id": "b", "text": { "ar": "تصميم بنية المعلومات وقوائم التنقل أو تقييمها", "en": "Designing or evaluating information architecture and navigation" } },
+        { "id": "c", "text": { "ar": "قياس الوقت الذي تستغرقه كل صفحة في التحميل", "en": "Measuring how long each page takes to load" } },
+        { "id": "d", "text": { "ar": "تحديد ترتيب البطاقات التي تظهر في الصفحة الرئيسية بصريًا", "en": "Deciding the visual order of the cards that appear on the home page" } }
+      ],
+      "answer": "b",
+      "explain": { "ar": "يرتب المستخدمون المواضيع في مجموعات، فنعرف كيف يتوقعون تنظيم المحتوى.", "en": "Users group topics themselves, showing how they expect content to be organised." }
+    },
+    {
+      "id": "ux14", "difficulty": "hard",
+      "q": { "ar": "ما فائدة خاصية Auto Layout في Figma؟", "en": "What is the benefit of Auto Layout in Figma?" },
+      "options": [
+        { "id": "a", "text": { "ar": "تولّد لوحة ألوان كاملة من لون واحد للعلامة", "en": "It generates a full colour palette from one brand colour" } },
+        { "id": "b", "text": { "ar": "تحوّل التصميم كله إلى كود واجهة أمامية جاهز يسلَّم للمبرمجين", "en": "It converts the whole design into production-ready front-end code for developers" } },
+        { "id": "c", "text": { "ar": "تجعل الإطار يغيّر حجمه ويرتب محتواه تلقائيًا عند تغيّر المحتوى", "en": "Frames resize and arrange their content automatically when content changes" } },
+        { "id": "d", "text": { "ar": "تحفظ نسخة جديدة من الملف مع كل تعديل", "en": "It saves a new version of the file every time you edit" } }
+      ],
+      "answer": "c",
+      "explain": { "ar": "مثلًا الزر يكبر تلقائيًا مع طول النص، وهي قريبة من فكرة Flexbox في CSS.", "en": "For example a button grows with its label; it is close to how Flexbox works in CSS." }
+    },
+    {
+      "id": "ux15", "difficulty": "hard",
+      "q": { "ar": "ما الفرق بين التقييم الاستدلالي (Heuristic Evaluation) واختبار قابلية الاستخدام؟", "en": "What is the difference between a heuristic evaluation and a usability test?" },
+      "options": [
+        { "id": "a", "text": { "ar": "يجريه خبراء وفق مبادئ معروفة، واختبار قابلية الاستخدام يشارك فيه مستخدمون حقيقيون", "en": "Experts check against known principles; a usability test uses real users" } },
+        { "id": "b", "text": { "ar": "هما الطريقة نفسها، والاختلاف في الاسم فقط", "en": "They are the same method; only the name differs" } },
+        { "id": "c", "text": { "ar": "التقييم الاستدلالي يعتمد على التحليلات فقط، واختبار قابلية الاستخدام يعتمد على الاستبيانات", "en": "A heuristic evaluation uses analytics only; a usability test uses surveys" } },
+        { "id": "d", "text": { "ar": "التقييم الاستدلالي يشارك فيه مستخدمون حقيقيون، واختبار قابلية الاستخدام يجريه خبراء", "en": "A heuristic evaluation involves real users; a usability test is done by experts" } }
+      ],
+      "answer": "a",
+      "explain": { "ar": "الأول سريع ورخيص، والثاني يكشف مشكلات لا يتوقعها الخبراء. الأفضل استخدامهما معًا.", "en": "The first is quick and cheap; the second finds problems experts don't expect. Use both." }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "ux-t1", "level": "beginner",
+      "title": { "ar": "إعادة تصميم شاشة تسجيل دخول", "en": "Redesign a login screen" },
+      "description": { "ar": "اختر شاشة تسجيل دخول من تطبيق تستخدمه، واكتب 3 مشكلات فيها، ثم أعد تصميمها في Figma مع توضيح سبب كل تعديل.", "en": "Pick a login screen from an app you use, list 3 problems in it, then redesign it in Figma and explain the reason for each change." },
+      "deliverable": { "ar": "رابط ملف Figma يحتوي الشاشة الأصلية والتصميم الجديد والملاحظات", "en": "A Figma link with the original screen, your redesign and your notes" }
+    },
+    {
+      "id": "ux-t2", "level": "beginner",
+      "title": { "ar": "لوحة إلهام ودليل أسلوب لتطبيق مقهى", "en": "Mood board and style guide for a café app" },
+      "description": { "ar": "اصنع لوحة إلهام (Mood Board) لتطبيق مقهى خيالي، ثم استخرج منها دليل أسلوب: لوحة ألوان، خطين، وأشكال الأزرار في حالاتها المختلفة.", "en": "Create a mood board for an imaginary café app, then turn it into a style guide: a colour palette, two fonts, and button styles in their different states." },
+      "deliverable": { "ar": "رابط ملف Figma", "en": "A Figma link" }
+    },
+    {
+      "id": "ux-t3", "level": "intermediate",
+      "title": { "ar": "شخصية مستخدم ورحلة استخدام لمنصة مسار", "en": "Persona and user journey for the Masar platform" },
+      "description": { "ar": "قابل 3 طلاب على الأقل واسألهم كيف اختاروا تخصصهم، ثم اصنع Persona واحدة وخريطة رحلة المستخدم (User Journey Map) من التسجيل حتى استلام خطة التطوير.", "en": "Interview at least 3 students about how they chose their field, then build one persona and a user journey map from sign-up to receiving the development plan." },
+      "deliverable": { "ar": "رابط FigJam أو ملف PDF يتضمن ملخص المقابلات", "en": "A FigJam link or PDF including a summary of the interviews" }
+    },
+    {
+      "id": "ux-t4", "level": "intermediate",
+      "title": { "ar": "من Wireframe إلى نموذج تفاعلي لطلب طعام", "en": "From wireframe to clickable prototype for food ordering" },
+      "description": { "ar": "صمم رحلة طلب طعام من 4 شاشات (القائمة، تفاصيل الوجبة، السلة، تأكيد الطلب): ابدأ بـ Wireframes ثم حولها إلى تصميم عالي الدقة واربطها كنموذج تفاعلي.", "en": "Design a 4-screen food ordering flow (menu, meal details, cart, confirmation): start with wireframes, move to high-fidelity screens and link them as a clickable prototype." },
+      "deliverable": { "ar": "رابط النموذج التفاعلي في Figma", "en": "A Figma prototype link" }
+    },
+    {
+      "id": "ux-t5", "level": "advanced",
+      "title": { "ar": "اختبار قابلية الاستخدام وتحسين التصميم", "en": "Usability test and iteration" },
+      "description": { "ar": "اختبر نموذجك مع 3 مستخدمين على الأقل باستخدام 3 مهام محددة، وسجّل أين ترددوا، ثم عدّل التصميم ووثّق النسخة قبل وبعد.", "en": "Test your prototype with at least 3 users on 3 defined tasks, record where they hesitated, then improve the design and document the before and after." },
+      "deliverable": { "ar": "تقرير قصير (PDF أو Notion) ورابط النسخة المحسّنة", "en": "A short report (PDF or Notion) and a link to the improved version" }
+    },
+    {
+      "id": "ux-t6", "level": "advanced",
+      "title": { "ar": "نظام تصميم مصغّر ودراسة حالة", "en": "Mini design system and case study" },
+      "description": { "ar": "ابنِ نظام تصميم يضم 10 مكونات على الأقل (أزرار، حقول إدخال، بطاقات...) بحالاتها المختلفة باستخدام Variants و Auto Layout، ثم اكتب دراسة حالة لمشروعك تعرضها في معرض أعمالك.", "en": "Build a design system with at least 10 components (buttons, inputs, cards…) and their states using variants and Auto Layout, then write a case study you can show in your portfolio." },
+      "deliverable": { "ar": "رابط ملف Figma ورابط دراسة الحالة (Behance أو Notion أو PDF)", "en": "A Figma link and a case study link (Behance, Notion or PDF)" }
+    }
+  ],
+  "plans": {
+    "beginner": {
+      "title": { "ar": "خطة البداية في UI/UX", "en": "UI/UX starter plan" },
+      "summary": { "ar": "هدفك الآن فهم أساسيات التصميم وإتقان Figma في الاستخدام اليومي.", "en": "Your goal now is to understand design basics and get comfortable with Figma." },
+      "steps": [
+        { "id": "s1", "title": { "ar": "تعلّم Figma من الصفر", "en": "Learn Figma from scratch" }, "details": { "ar": "الإطارات، الأشكال، النصوص، المكونات، و Auto Layout. أعد رسم 3 شاشات من تطبيقات تستخدمها كما هي.", "en": "Frames, shapes, text, components and Auto Layout. Recreate 3 screens from apps you use exactly as they are." } },
+        { "id": "s2", "title": { "ar": "أساسيات التصميم البصري", "en": "Visual design basics" }, "details": { "ar": "التسلسل البصري، المحاذاة، المسافات، الألوان، والخطوط. طبّقها في المهمة الثانية.", "en": "Visual hierarchy, alignment, spacing, colour and type. Apply them in task 2." } },
+        { "id": "s3", "title": { "ar": "قوانين تجربة المستخدم", "en": "Laws of UX" }, "details": { "ar": "اقرأ قوانين Jakob و Fitts و Hick، واكتب مثالًا لكل قانون من تطبيق حقيقي.", "en": "Read Jakob's, Fitts's and Hick's laws and write one real-app example for each." } },
+        { "id": "s4", "title": { "ar": "نفّذ مهام المستوى المبتدئ", "en": "Complete the beginner tasks" }, "details": { "ar": "سلّم المهمتين الأولى والثانية، ثم أعد اختبار المستوى بعد الانتهاء.", "en": "Submit tasks 1 and 2, then retake the level test when you are done." } }
+      ]
+    },
+    "intermediate": {
+      "title": { "ar": "خطة المستوى المتوسط في UI/UX", "en": "UI/UX intermediate plan" },
+      "summary": { "ar": "انتقل من الرسم إلى عملية تصميم كاملة تبدأ بفهم المستخدم.", "en": "Move from drawing screens to a full design process that starts with the user." } ,
+      "steps": [
+        { "id": "s1", "title": { "ar": "البحث مع المستخدمين", "en": "User research" }, "details": { "ar": "تعلّم كتابة أسئلة مقابلة محايدة، وكيف تلخّص النتائج في Persona ورحلة مستخدم.", "en": "Learn to write neutral interview questions and summarise findings into a persona and journey map." } },
+        { "id": "s2", "title": { "ar": "بنية المعلومات", "en": "Information architecture" }, "details": { "ar": "خرائط الموقع (Sitemaps)، ومخططات تدفق المستخدم (User Flows)، وفرز البطاقات.", "en": "Sitemaps, user flows and card sorting." } },
+        { "id": "s3", "title": { "ar": "النماذج التفاعلية", "en": "Interactive prototypes" }, "details": { "ar": "اربط الشاشات في Figma مع الانتقالات و Smart Animate، ونفّذ المهمة الرابعة.", "en": "Link screens in Figma with transitions and Smart Animate, and complete task 4." } },
+        { "id": "s4", "title": { "ar": "إمكانية الوصول", "en": "Accessibility" }, "details": { "ar": "راجع معايير WCAG الأساسية: التباين، حجم الأهداف، والنص البديل.", "en": "Review core WCAG criteria: contrast, target size and alternative text." } }
+      ]
+    },
+    "advanced": {
+      "title": { "ar": "خطة المستوى المتقدم في UI/UX", "en": "UI/UX advanced plan" },
+      "summary": { "ar": "ركّز على الاختبار والتحسين وبناء معرض أعمال يقنع جهات التوظيف.", "en": "Focus on testing, iteration and a portfolio that convinces employers." },
+      "steps": [
+        { "id": "s1", "title": { "ar": "اختبار قابلية الاستخدام", "en": "Usability testing" }, "details": { "ar": "خطط لاختبار، نفّذه مع مستخدمين، وحوّل الملاحظات إلى تعديلات (المهمة الخامسة).", "en": "Plan a test, run it with users and turn findings into changes (task 5)." } },
+        { "id": "s2", "title": { "ar": "أنظمة التصميم", "en": "Design systems" }, "details": { "ar": "المكونات، الـ Variants، الـ Tokens، والتوثيق. نفّذ المهمة السادسة.", "en": "Components, variants, tokens and documentation. Complete task 6." } },
+        { "id": "s3", "title": { "ar": "التعاون مع المطورين", "en": "Working with developers" }, "details": { "ar": "تعلّم أساسيات HTML و CSS لتفهم حدود التنفيذ، واستخدم وضع Dev Mode لتسليم التصميم.", "en": "Learn HTML and CSS basics to understand build limits, and use Dev Mode for handoff." } },
+        { "id": "s4", "title": { "ar": "معرض الأعمال", "en": "Portfolio" }, "details": { "ar": "اكتب دراستي حالة على الأقل تعرض المشكلة والبحث والحل والنتيجة.", "en": "Write at least two case studies showing the problem, research, solution and outcome." } }
+      ]
+    }
+  },
+  "resources": [
+    { "title": "Google UX Design Certificate", "url": "https://www.coursera.org/professional-certificates/google-ux-design", "lang": "en", "type": "course" },
+    { "title": "Figma Help Center", "url": "https://help.figma.com/", "lang": "en", "type": "docs" },
+    { "title": "Laws of UX", "url": "https://lawsofux.com/", "lang": "en", "type": "article" },
+    { "title": "Nielsen Norman Group Articles", "url": "https://www.nngroup.com/articles/", "lang": "en", "type": "article" },
+    { "title": "UX Design Roadmap", "url": "https://roadmap.sh/ux-design", "lang": "en", "type": "roadmap" },
+    { "title": "WCAG Quick Reference", "url": "https://www.w3.org/WAI/WCAG22/quickref/", "lang": "en", "type": "docs" }
+  ]
+}
