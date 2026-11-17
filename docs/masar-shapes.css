@@ -1,0 +1,57 @@
+/*
+ * Masar: "shapes only" look
+ * -------------------------
+ * Turns every piece of text on the page into a rounded grey bar, so only the
+ * layout, cards, buttons, lines and icons show.
+ *
+ * How it works: the text colour is made transparent, then a thick
+ * line-through is drawn over each line of text in grey. Icons (SVG) keep
+ * their colour, and text inside drawings is hidden.
+ *
+ * Use: add class="shapes" to the <html> tag of any page that loads this file.
+ * (In the demo build it is switched on with VITE_DEMO_SHAPES=1, which uses the
+ * html[data-demo-shapes] attribute instead; see client/demo/demo.css.)
+ */
+
+:root {
+  --shape-bar: #d0d0d0; /* colour of the grey bars */
+  --shape-icon: #1b1b1f; /* colour of icons drawn in the text colour */
+}
+
+/* 1. Every piece of text becomes a grey bar. */
+html.shapes body *,
+html.shapes body *::before,
+html.shapes body *::after {
+  color: transparent !important;
+  text-shadow: none !important;
+  text-decoration-line: line-through !important;
+  text-decoration-thickness: 0.7em !important; /* bar height */
+  text-decoration-color: var(--shape-bar) !important;
+  text-decoration-skip-ink: none !important; /* solid bar, no gaps */
+}
+
+/* 2. Placeholder text inside inputs disappears. */
+html.shapes input::placeholder,
+html.shapes textarea::placeholder {
+  color: transparent !important;
+}
+
+/* 3. Words inside drawings (SVG) are hidden. */
+html.shapes svg text {
+  display: none;
+}
+
+/* 4. Icons drawn in the text colour stay visible. */
+html.shapes body svg,
+html.shapes body svg * {
+  color: var(--shape-icon) !important;
+  text-decoration-line: none !important;
+}
+
+/* Dark mode: lighter icons, darker bars. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shape-bar: #3a3a40;
+    --shape-icon: #f2f2f5;
+  }
+}
