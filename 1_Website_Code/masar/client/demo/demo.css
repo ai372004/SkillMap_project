@@ -118,3 +118,32 @@ html[data-demo-guest] .topbar__nav a[href='#/account'],
 html[data-demo-guest] .topbar__nav .link-button {
   display: none;
 }
+
+/* Shapes-only demo: text becomes rounded grey bars; shapes and icons stay. */
+html[data-demo-shapes] body *,
+html[data-demo-shapes] body *::before,
+html[data-demo-shapes] body *::after {
+  color: transparent !important;
+  text-shadow: none !important;
+  text-decoration-line: line-through !important;
+  text-decoration-thickness: 0.7em !important;
+  text-decoration-color: var(--rule-strong) !important;
+  text-decoration-skip-ink: none !important;
+}
+html[data-demo-shapes] input::placeholder,
+html[data-demo-shapes] textarea::placeholder {
+  color: transparent !important;
+}
+html[data-demo-shapes] svg text {
+  display: none;
+}
+/* Icons drawn in the text colour stay visible. */
+html[data-demo-shapes] body svg,
+html[data-demo-shapes] body svg * {
+  color: var(--ink) !important;
+  text-decoration-line: none !important;
+}
+html[data-demo-shapes] .demo-note,
+html[data-demo-shapes] .skip-link {
+  display: none;
+}

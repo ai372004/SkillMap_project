@@ -32,3 +32,7 @@ if (import.meta.env.VITE_DEMO_GUEST) {
   skipHidden();
   window.addEventListener('hashchange', skipHidden);
 }
+
+// Shapes-only demo (VITE_DEMO_SHAPES=1): every piece of text is drawn as a grey
+// bar, so only the layout, cards, buttons and icons show (see demo.css).
+if (import.meta.env.VITE_DEMO_SHAPES) document.documentElement.dataset.demoShapes = '';
