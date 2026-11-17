@@ -27,7 +27,7 @@ export function ThemeProvider({ children, allowDark = DARK_MODE_ENABLED }) {
     document.documentElement.dataset.theme = theme;
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute('content', theme === 'dark' ? '#16130f' : '#f6f7f3');
+      ?.setAttribute('content', theme === 'dark' ? '#16191d' : '#f6f7f3');
   }, [theme]);
 
   const setTheme = useCallback((next) => {

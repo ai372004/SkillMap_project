@@ -19,6 +19,7 @@
   --fill: var(--primary);
   --fill-hover: var(--primary-hover);
   --on-fill: #ffffff;
+  --chrome: var(--surface); /* top bar */
   --signal: #c9a23c;
   --focus: #1f7a64;
   --ok: #0b7a4b;
@@ -57,37 +58,37 @@
    falls back to the device setting; index.html sets data-theme before the
    first paint so the page never flashes the wrong colours. */
 :root[data-theme='dark'] {
-  /* Warm dark theme: near-black brown page, warm grey-brown cards, one
-     light green (#48B99E) for buttons, links and the selected menu item,
-     and gold accents. */
-  --bg: #16130f;
-  --surface: #39332b;
-  --ink: #f3eee6;
-  --ink-2: #d9d1c5;
-  --muted: #bdb3a3;
-  --rule: #4a4239;
-  --rule-strong: #61574b;
-  --control: #a89e8e;
-  --primary: #48b99e;
-  --primary-hover: #63c6ad;
-  --on-primary: #16130f;
-  --fill: var(--primary);
-  --fill-hover: var(--primary-hover);
-  --on-fill: #16130f;
-  --signal: #e0bc5a;
-  --focus: #e0bc5a;
-  --ok: #6fcf9b;
-  --ok-bg: #1f3a2c;
-  --warn: #f0b155;
-  --warn-bg: #3d2f17;
+  /* Dark theme from the team's reference: charcoal page, darker top bar,
+     slate cards, olive green buttons and mustard-gold accents. */
+  --bg: #1c1d21;
+  --surface: #24282c;
+  --chrome: #16191d;
+  --ink: #f2f3ef;
+  --ink-2: #d5d8d2;
+  --muted: #a9ada6;
+  --rule: #2f3439;
+  --rule-strong: #41474e;
+  --control: #8b9089;
+  --primary: #a6b46e;
+  --primary-hover: #b9c687;
+  --on-primary: #1c1d21;
+  --fill: #546420;
+  --fill-hover: #62742a;
+  --on-fill: #ffffff;
+  --signal: #a89636;
+  --focus: #b9c687;
+  --ok: #8fcf6b;
+  --ok-bg: #26351b;
+  --warn: #e6b955;
+  --warn-bg: #3a3015;
   --bad: #ff8a80;
   --bad-bg: #45231f;
-  --on-ink: #16130f;
-  --ink-hover: #e6dfd4;
-  --on-track: #16130f;
+  --on-ink: #1c1d21;
+  --ink-hover: #e2e4df;
+  --on-track: #1c1d21;
   --backdrop: rgb(0 0 0 / 0.65);
   --shadow: 0 4px 24px rgb(0 0 0 / 0.4);
-  --hero-bg: #2a251f;
+  --hero-bg: #16191d;
   --badge: #d92d4e;
 
   color-scheme: dark;
@@ -107,6 +108,11 @@
   :root[data-theme='dark'] [style*='--track-base'] {
     --track: oklch(from var(--track-base) max(l, 0.74) calc(c * 1.3) h);
   }
+}
+/* In dark mode the Front-end track (the brand green) takes the theme's
+   olive, so it matches the buttons instead of turning teal. */
+:root[data-theme='dark'] [style*='--track-base: #1D5E50' i] {
+  --track: var(--primary);
 }
 
 *,
@@ -240,7 +246,7 @@ code {
 }
 
 .topbar {
-  background: var(--surface);
+  background: var(--chrome);
   border-block-end: 1px solid var(--rule);
   position: sticky;
   inset-block-start: 0;
