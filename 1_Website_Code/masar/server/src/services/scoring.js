@@ -97,7 +97,7 @@ export function scoreTrackQuiz(answers, quiz = TRACK_QUIZ) {
     answers: cleanAnswers(quiz.questions, answers),
     scores: ranked,
     recommendedTrack: ranked[0].track,
-    closeMatch: ranked[0].percent - ranked[1].percent < CLOSE_MATCH_GAP,
+    closeMatch: ranked.length > 1 && ranked[0].percent - ranked[1].percent < CLOSE_MATCH_GAP,
   };
 }
 

@@ -9,7 +9,10 @@ import frontend from '../../server/src/content/frontend.json';
 import backend from '../../server/src/content/backend.json';
 import data from '../../server/src/content/data.json';
 
-export const TRACKS = TRACKS_JSON;
+// Optional: build a demo that shows only some tracks, e.g.
+//   VITE_DEMO_TRACKS=frontend npm run build:demo
+const ONLY = (import.meta.env.VITE_DEMO_TRACKS || '').split(',').map((t) => t.trim()).filter(Boolean);
+export const TRACKS = ONLY.length ? TRACKS_JSON.filter((t) => ONLY.includes(t.id)) : TRACKS_JSON;
 export const TRACK_IDS = TRACKS.map((t) => t.id);
 export const TRACK_QUIZ = TRACK_QUIZ_JSON;
 

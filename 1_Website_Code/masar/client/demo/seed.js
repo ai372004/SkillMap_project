@@ -2,7 +2,7 @@
 // journey, so every screen (including the supervisor's) has something to show.
 // Answers are picked to steer each student to a track and a level, then scored
 // by the server's own scoring code.
-import { TRACK_QUIZ, getTrackContent } from './content.js';
+import { TRACK_IDS, TRACK_QUIZ, getTrackContent, isTrack } from './content.js';
 import { scoreLevelTest, scoreTrackQuiz } from '../../server/src/services/scoring.js';
 
 export const DEMO_ADMIN = { email: 'admin@masar.test', password: 'admin1234' };
@@ -98,7 +98,7 @@ export function seedDemo() {
     db.users.push(user);
     if (!reached('quiz')) return;
 
-    const quiz = scoreTrackQuiz(quizAnswersFor(track));
+    const quiz = scoreTrackQuiz(quizAnswersFor(isTrack(track) ? track : TRACK_IDS[0]));
     const quizAt = step();
     db.trackResults.push({ id: id(), user: userId, ...quiz, createdAt: quizAt, updatedAt: quizAt });
     user.recommendedTrack = quiz.recommendedTrack;
