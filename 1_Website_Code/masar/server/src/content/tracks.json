@@ -2,7 +2,7 @@
   {
     "id": "uiux",
     "icon": "🎨",
-    "color": "#7C3AED",
+    "color": "#8A4B8F",
     "name": {
       "ar": "تصميم الواجهات وتجربة المستخدم",
       "en": "UI/UX Design"
@@ -24,7 +24,7 @@
   {
     "id": "frontend",
     "icon": "🖥️",
-    "color": "#1D5FD6",
+    "color": "#1D5E50",
     "name": {
       "ar": "تطوير الواجهات الأمامية",
       "en": "Front-end Development"
@@ -47,7 +47,7 @@
   {
     "id": "backend",
     "icon": "🗄️",
-    "color": "#0A7568",
+    "color": "#2F5D8C",
     "name": {
       "ar": "تطوير الأنظمة الخلفية",
       "en": "Back-end Development"
@@ -70,7 +70,7 @@
   {
     "id": "data",
     "icon": "📊",
-    "color": "#B4560A",
+    "color": "#94660F",
     "name": {
       "ar": "علوم وتحليل البيانات",
       "en": "Data Science & Analytics"

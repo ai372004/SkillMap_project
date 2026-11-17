@@ -37,7 +37,7 @@ export function ThemeProvider({ children }) {
     document.documentElement.dataset.theme = theme;
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute('content', theme === 'dark' ? '#15132a' : '#f8f8f8');
+      ?.setAttribute('content', theme === 'dark' ? '#0f1a17' : '#f6f7f3');
   }, [theme]);
 
   const setTheme = useCallback((next) => {

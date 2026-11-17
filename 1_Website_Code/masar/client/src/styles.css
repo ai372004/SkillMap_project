@@ -1,22 +1,22 @@
-/* Masar design tokens
-   Visual language from the Dreams LMS kit: deep purple primary, coral
-   accent, Inter type, pill buttons, soft 10px cards on a light grey page.
+/* skillmap design tokens
+   Colours follow the skillmap logo: deep green primary, gold accent.
+   Inter type, pill buttons, soft 10px cards on a light page.
    The transit-map idea stays: each track is a coloured line and the
    student's journey is a row of stations. */
 :root {
-  --bg: #f8f8f8;
+  --bg: #f6f7f3;
   --surface: #ffffff;
-  --ink: #191919;
-  --ink-2: #3d3d3d;
-  --muted: #5d5d5d;
-  --rule: #e6e6e6;
-  --rule-strong: #cfcfcf;
-  --control: #767676;
-  --primary: #392c7d;
-  --primary-hover: #2d2263;
+  --ink: #16201c;
+  --ink-2: #34403b;
+  --muted: #57615c;
+  --rule: #e2e7e2;
+  --rule-strong: #c8d1cb;
+  --control: #6f7a74;
+  --primary: #1d5e50;
+  --primary-hover: #164a3f;
   --on-primary: #ffffff;
-  --signal: #ff4667;
-  --focus: #5b49b8;
+  --signal: #c9a23c;
+  --focus: #1f7a64;
   --ok: #0b7a4b;
   --ok-bg: #e3f4ec;
   --warn: #8a5200;
@@ -24,11 +24,11 @@
   --bad: #b42318;
   --bad-bg: #fde7e5;
   --on-ink: #ffffff;
-  --ink-hover: #333333;
+  --ink-hover: #2c3833;
   --on-track: #ffffff;
-  --backdrop: rgb(25 25 25 / 0.5);
-  --shadow: 0 4px 24px rgb(57 44 125 / 0.07);
-  --hero-bg: #f1eefb;
+  --backdrop: rgb(22 32 28 / 0.5);
+  --shadow: 0 4px 24px rgb(29 94 80 / 0.08);
+  --hero-bg: #edf3ee;
   --badge: #d92d4e;
 
   --r-sm: 8px;
@@ -53,31 +53,31 @@
    falls back to the device setting; index.html sets data-theme before the
    first paint so the page never flashes the wrong colours. */
 :root[data-theme='dark'] {
-  --bg: #15132a;
-  --surface: #1f1c38;
-  --ink: #ecebf5;
-  --ink-2: #cfcce3;
-  --muted: #a7a3c4;
-  --rule: #312d4f;
-  --rule-strong: #45406a;
-  --control: #8c88a8;
-  --primary: #6a5bd1;
-  --primary-hover: #7e70dd;
-  --on-primary: #ffffff;
-  --signal: #ff6b85;
-  --focus: #a999ff;
+  --bg: #0f1a17;
+  --surface: #16241f;
+  --ink: #e8efeb;
+  --ink-2: #c8d4ce;
+  --muted: #9db0a7;
+  --rule: #24372f;
+  --rule-strong: #355046;
+  --control: #7f948a;
+  --primary: #5cc4a6;
+  --primary-hover: #7dd3ba;
+  --on-primary: #0f1a17;
+  --signal: #e0bc5a;
+  --focus: #e0bc5a;
   --ok: #4cc38a;
   --ok-bg: #12352a;
   --warn: #f0b155;
   --warn-bg: #3a2a10;
   --bad: #ff7b72;
   --bad-bg: #3d1a1a;
-  --on-ink: #15132a;
-  --ink-hover: #d8d5ea;
-  --on-track: #15132a;
+  --on-ink: #0f1a17;
+  --ink-hover: #d3ded8;
+  --on-track: #0f1a17;
   --backdrop: rgb(0 0 0 / 0.65);
   --shadow: 0 4px 24px rgb(0 0 0 / 0.35);
-  --hero-bg: #1b1836;
+  --hero-bg: #13221d;
   --badge: #d92d4e;
 
   color-scheme: dark;
@@ -91,6 +91,12 @@
 }
 :root[data-theme='dark'] [style*='--track-base'] {
   --track: color-mix(in oklab, var(--track-base) 65%, white);
+}
+/* Where supported, lighten without washing the colour out. */
+@supports (color: oklch(from red l c h)) {
+  :root[data-theme='dark'] [style*='--track-base'] {
+    --track: oklch(from var(--track-base) max(l, 0.74) calc(c * 1.3) h);
+  }
 }
 
 *,
@@ -260,17 +266,11 @@ code {
 }
 /* skillmap wordmark: "skill" in green, "map" in gold, as in the logo. */
 .logo__word {
-  color: #1d5e50;
+  color: var(--primary);
   letter-spacing: -0.01em;
 }
 .logo__word-accent {
-  color: #c9a23c;
-}
-[data-theme='dark'] .logo__word {
-  color: #4fb39a;
-}
-[data-theme='dark'] .logo__word-accent {
-  color: #e0bc5a;
+  color: var(--signal);
 }
 
 .topbar__nav {
@@ -2448,7 +2448,7 @@ input[dir='ltr'] {
   background: var(--surface);
   border: 1px solid var(--rule);
   border-inline-start: 5px solid var(--track);
-  box-shadow: 0 12px 32px rgb(20 16 50 / 0.18);
+  box-shadow: 0 12px 32px rgb(16 32 26 / 0.18);
   animation: toast-in 0.4s cubic-bezier(0.34, 1.4, 0.64, 1) both;
 }
 @keyframes toast-in {
