@@ -1,14 +1,10 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 
 // Light / dark theme.
-// The user's choice is saved in the browser. Until they choose, the site
-// follows the device setting (and keeps following it if that changes).
+// The site opens in light mode. Dark mode is still there: the visitor can
+// switch to it, and that choice is saved in the browser.
 const ThemeContext = createContext(null);
 export const THEME_KEY = 'masar.theme';
-
-const media = () =>
-  typeof window !== 'undefined' && window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
-const systemTheme = () => (media()?.matches ? 'dark' : 'light');
 
 function readSaved() {
   try {
@@ -20,18 +16,7 @@ function readSaved() {
 }
 
 export function ThemeProvider({ children }) {
-  const [choice, setChoice] = useState(readSaved); // 'light' | 'dark' | null (follow device)
-  const [system, setSystem] = useState(systemTheme);
-  const theme = choice || system;
-
-  // Follow device changes while the user hasn't picked a theme.
-  useEffect(() => {
-    const mq = media();
-    if (!mq) return undefined;
-    const onChange = (e) => setSystem(e.matches ? 'dark' : 'light');
-    mq.addEventListener('change', onChange);
-    return () => mq.removeEventListener('change', onChange);
-  }, []);
+  const [theme, setChoice] = useState(() => readSaved() || 'light');
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;

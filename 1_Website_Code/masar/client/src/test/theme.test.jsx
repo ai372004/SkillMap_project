@@ -16,10 +16,11 @@ describe('ThemeProvider', () => {
   beforeEach(() => {
     localStorage.clear();
     document.documentElement.removeAttribute('data-theme');
-    window.matchMedia = (q) => ({ matches: false, media: q, addEventListener() {}, removeEventListener() {} });
+    // The device asks for dark mode; the site should still open in light.
+    window.matchMedia = (q) => ({ matches: true, media: q, addEventListener() {}, removeEventListener() {} });
   });
 
-  it('follows the device when nothing is saved', () => {
+  it('opens in light mode when nothing is saved, whatever the device setting', () => {
     render(
       <ThemeProvider>
         <Probe />
@@ -41,7 +42,7 @@ describe('ThemeProvider', () => {
     expect(document.documentElement.dataset.theme).toBe('dark');
   });
 
-  it('prefers a saved choice over the device setting', () => {
+  it('uses dark mode when the visitor has chosen it', () => {
     localStorage.setItem(THEME_KEY, 'dark');
     render(
       <ThemeProvider>

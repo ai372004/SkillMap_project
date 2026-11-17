@@ -1,9 +1,7 @@
-// Apply the saved theme (or the device setting) before the first paint.
+// Apply the saved theme before the first paint. The site opens in light
+// mode; dark mode is used only when the visitor has switched to it.
 (function () {
   var t = null;
   try { t = localStorage.getItem('masar.theme'); } catch (e) {}
-  if (t !== 'dark' && t !== 'light') {
-    t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-  document.documentElement.setAttribute('data-theme', t);
+  document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
 })();
