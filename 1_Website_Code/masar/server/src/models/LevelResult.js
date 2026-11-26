@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import { levelRetakeAt } from '../services/scoring.js';
 
 // One document per level test attempt.
 const levelResultSchema = new mongoose.Schema(
@@ -24,6 +25,8 @@ levelResultSchema.set('toJSON', {
   transform: (_doc, ret) => {
     ret.id = ret._id.toString();
     delete ret._id;
+    // When the student may take this track's test again.
+    ret.retakeAt = levelRetakeAt(ret.createdAt);
     return ret;
   },
 });

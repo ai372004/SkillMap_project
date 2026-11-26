@@ -6,8 +6,8 @@ import { User } from '../models/User.js';
 import { LevelResult } from '../models/LevelResult.js';
 import { Submission } from '../models/Submission.js';
 import { findTask, getTrack, getTrackContent, isTrack, publicLevelTest } from '../content/index.js';
-import { explainTrack, scoreLevelTest, scoreTrackQuiz } from '../services/scoring.js';
-import { badRequest, notFound } from '../utils/httpError.js';
+import { explainTrack, levelRetakeAt, scoreLevelTest, scoreTrackQuiz } from '../services/scoring.js';
+import { HttpError, badRequest, notFound } from '../utils/httpError.js';
 import { computeBadges } from '../services/badges.js';
 import { planSummary } from '../services/plan.js';
 
@@ -80,14 +80,26 @@ router.put('/me/track', async (req, res) => {
 
 // ---- Level test ----
 
-router.get('/tracks/:track/level-test', (req, res) => {
+// A level test can be retaken only after LEVEL_RETAKE_DAYS, checked both when
+// the questions are opened and when answers are submitted.
+async function assertCanTakeLevelTest(userId, track) {
+  const last = await LevelResult.findOne({ user: userId, track }).sort({ createdAt: -1 }).select('createdAt');
+  const retakeAt = levelRetakeAt(last?.createdAt);
+  if (retakeAt && retakeAt > new Date()) {
+    throw new HttpError(429, 'RETAKE_TOO_SOON', 'You can retake this level test later', { retakeAt });
+  }
+}
+
+router.get('/tracks/:track/level-test', async (req, res) => {
   assertTrack(req.params.track);
+  await assertCanTakeLevelTest(req.user._id, req.params.track);
   res.json({ track: getTrack(req.params.track), questions: publicLevelTest(req.params.track) });
 });
 
 router.post('/tracks/:track/level-test/submit', async (req, res) => {
   const { track } = req.params;
   assertTrack(track);
+  await assertCanTakeLevelTest(req.user._id, track);
   const { review, ...result } = scoreLevelTest(track, req.body?.answers);
 
   const saved = await LevelResult.create({ user: req.user._id, track, ...result });

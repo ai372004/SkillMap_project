@@ -63,6 +63,10 @@ describe('Offline demo API', () => {
     expect(
       (await call('POST', `/tracks/${track}/level-test/submit`, { token, body: { answers: levelAnswers } })).status
     ).toBe(201);
+    // Like the real server, the test stays locked for a few days after an attempt.
+    const locked = await call('GET', `/tracks/${track}/level-test`, { token });
+    expect(locked.status).toBe(429);
+    expect(locked.data.error.code).toBe('RETAKE_TOO_SOON');
 
     const plan = await call('GET', '/me/plan', { token });
     const step = plan.data.plan.steps[0].id;

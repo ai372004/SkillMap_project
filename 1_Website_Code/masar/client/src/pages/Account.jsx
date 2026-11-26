@@ -41,8 +41,11 @@ export default function Account() {
       setDone(true);
       if (user?.mustChangePassword) navigate(user.role === 'admin' ? '/admin' : '/dashboard');
     } catch (err) {
+      // Show the server's reason under the field it is about: "wrong password" and
+      // "same password" have their own messages, not the field's "required" hint.
+      const specific = ['WRONG_PASSWORD', 'SAME_PASSWORD'].includes(err.code) ? t(`errors.${err.code}`) : null;
       if (err.details?.fields)
-        setFieldErrors(Object.fromEntries(err.details.fields.map((f) => [f, t(`account.fields.${f}`)])));
+        setFieldErrors(Object.fromEntries(err.details.fields.map((f) => [f, specific || t(`account.fields.${f}`)])));
       setError(err);
     } finally {
       setBusy(false);

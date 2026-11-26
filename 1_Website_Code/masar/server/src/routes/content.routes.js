@@ -1,13 +1,13 @@
 // Public content that anyone can read, even before logging in.
 import { Router } from 'express';
 import { TRACKS, getTrackContent, isTrack, publicTrackQuiz } from '../content/index.js';
-import { CLOSE_MATCH_GAP, DIFFICULTY_WEIGHTS, LEVELS } from '../services/scoring.js';
+import { CLOSE_MATCH_GAP, DIFFICULTY_WEIGHTS, LEVELS, LEVEL_RETAKE_DAYS } from '../services/scoring.js';
 import { notFound } from '../utils/httpError.js';
 
 const router = Router();
 
 router.get('/config', (_req, res) => {
-  res.json({ levels: LEVELS, difficultyWeights: DIFFICULTY_WEIGHTS, closeMatchGap: CLOSE_MATCH_GAP });
+  res.json({ levels: LEVELS, difficultyWeights: DIFFICULTY_WEIGHTS, closeMatchGap: CLOSE_MATCH_GAP, levelRetakeDays: LEVEL_RETAKE_DAYS });
 });
 
 router.get('/tracks', (_req, res) => {

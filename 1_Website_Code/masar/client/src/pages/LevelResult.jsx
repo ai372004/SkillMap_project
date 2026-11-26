@@ -9,7 +9,7 @@ import CountUp from '../components/CountUp.jsx';
 
 export default function LevelResult() {
   const { track: trackId } = useParams();
-  const { t, pick } = useLang();
+  const { t, pick, formatDate } = useLang();
   const { user } = useAuth();
   const location = useLocation();
   const fresh = location.state?.result?.track === trackId ? location.state : null;
@@ -37,6 +37,7 @@ export default function LevelResult() {
   }
 
   const isChosen = user.chosenTrack === trackId;
+  const retakeLocked = result.retakeAt && new Date(result.retakeAt) > new Date();
   const questionsById = fresh ? Object.fromEntries(fresh.questions.map((q) => [q.id, q])) : {};
 
   return (
@@ -82,9 +83,13 @@ export default function LevelResult() {
             {t('levelResult.openPlan')}
           </Link>
         )}
-        <Link to={`/level-test/${trackId}`} className="btn btn--ghost">
-          {t('levelResult.retake')}
-        </Link>
+        {retakeLocked ? (
+          <p className="muted">{t('levelResult.retakeOn', { date: formatDate(result.retakeAt) })}</p>
+        ) : (
+          <Link to={`/level-test/${trackId}`} className="btn btn--ghost">
+            {t('levelResult.retake')}
+          </Link>
+        )}
       </div>
 
       <section aria-labelledby="review-title" className="review">

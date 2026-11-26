@@ -123,6 +123,14 @@ describe('full journey with a database', { skip: !TEST_DB && 'set MONGO_URI_TEST
     assert.equal(res.body.result.percent, 50);
     assert.equal(res.body.result.level, 'intermediate');
     assert.equal(res.body.review.length, 15);
+    assert.ok(new Date(res.body.result.retakeAt) > new Date(), 'the result says when the test reopens');
+
+    // Right after an attempt the test is locked: the review showed the answers.
+    const locked = await request(app).get('/api/tracks/data/level-test').set('Authorization', `Bearer ${studentToken}`).expect(429);
+    assert.equal(locked.body.error.code, 'RETAKE_TOO_SOON');
+    assert.ok(locked.body.error.details.retakeAt);
+    const resubmit = await request(app).post('/api/tracks/data/level-test/submit').set('Authorization', `Bearer ${studentToken}`).send({ answers }).expect(429);
+    assert.equal(resubmit.body.error.code, 'RETAKE_TOO_SOON');
 
     const plan = await request(app).get('/api/me/plan').set('Authorization', `Bearer ${studentToken}`).expect(200);
     assert.equal(plan.body.level, 'intermediate');

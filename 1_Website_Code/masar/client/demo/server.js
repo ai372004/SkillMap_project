@@ -15,7 +15,7 @@ import {
   publicLevelTest,
   publicTrackQuiz,
 } from './content.js';
-import { explainTrack, scoreLevelTest, scoreTrackQuiz, ScoringError } from '../../server/src/services/scoring.js';
+import { explainTrack, levelRetakeAt, scoreLevelTest, scoreTrackQuiz, ScoringError } from '../../server/src/services/scoring.js';
 import { computeBadges } from '../../server/src/services/badges.js';
 import { planSummary } from '../../server/src/services/plan.js';
 import { toCsv } from '../../server/src/utils/csv.js';
@@ -87,6 +87,8 @@ function publicUser(u) {
   return rest;
 }
 const withoutAnswers = ({ answers: _a, ...rest }) => rest;
+// A level result as the API sends it, with the date the test opens again.
+const levelOut = (r) => ({ ...withoutAnswers(r), retakeAt: levelRetakeAt(r.createdAt) });
 const tokenFor = (u) => `demo.${u.id}.${u.tokenVersion}`;
 
 /** Session token of the built-in visitor, for the no-login demo (VITE_DEMO_GUEST). */
@@ -108,7 +110,7 @@ const mine = (list, userId) => list.filter((x) => x.user === userId);
 
 function latestLevels(db, userId) {
   const latest = {};
-  for (const r of mine(db.levelResults, userId).sort(byNewest('createdAt'))) latest[r.track] ??= withoutAnswers(r);
+  for (const r of mine(db.levelResults, userId).sort(byNewest('createdAt'))) latest[r.track] ??= levelOut(r);
   return latest;
 }
 
@@ -300,11 +302,23 @@ route(
   'user'
 );
 
+// Same rule as the server: a level test reopens LEVEL_RETAKE_DAYS after the last attempt.
+function assertCanTakeLevelTest(db, user, track) {
+  const last = mine(db.levelResults, user.id)
+    .filter((r) => r.track === track)
+    .sort(byNewest('createdAt'))[0];
+  const retakeAt = levelRetakeAt(last?.createdAt);
+  if (retakeAt && retakeAt > new Date()) {
+    throw new HttpError(429, 'RETAKE_TOO_SOON', 'You can retake this level test later', { retakeAt });
+  }
+}
+
 route(
   'GET',
   '/tracks/:track/level-test',
-  ({ params }) => {
+  ({ db, user, params }) => {
     if (!isTrack(params.track)) throw notFound('UNKNOWN_TRACK', 'Unknown track');
+    assertCanTakeLevelTest(db, user, params.track);
     return { track: getTrack(params.track), questions: publicLevelTest(params.track) };
   },
   'user'
@@ -315,11 +329,12 @@ route(
   '/tracks/:track/level-test/submit',
   ({ db, user, params, body }) => {
     if (!isTrack(params.track)) throw notFound('UNKNOWN_TRACK', 'Unknown track');
+    assertCanTakeLevelTest(db, user, params.track);
     const { review, ...result } = scoreLevelTest(params.track, body?.answers);
     const at = now();
     const saved = { id: newId(db), user: user.id, track: params.track, ...result, createdAt: at, updatedAt: at };
     db.levelResults.push(saved);
-    return [201, { result: saved, review }];
+    return [201, { result: levelOut(saved), review }];
   },
   'user'
 );
@@ -561,7 +576,7 @@ route(
   ({ db, params }) => {
     const student = db.users.find((u) => u.id === params.id);
     if (!student) throw notFound('UNKNOWN_STUDENT', 'Student not found');
-    const levels = mine(db.levelResults, student.id).sort(byNewest('createdAt')).map(withoutAnswers);
+    const levels = mine(db.levelResults, student.id).sort(byNewest('createdAt')).map(levelOut);
     const submissions = mine(db.submissions, student.id).sort(byNewest('updatedAt'));
     return {
       student: publicUser(student),

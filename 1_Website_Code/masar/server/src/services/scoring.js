@@ -22,6 +22,17 @@ export const LEVELS = [
 // If the top two tracks are this close, we tell the student both fit.
 export const CLOSE_MATCH_GAP = 10;
 
+// Days a student waits before retaking a track's level test. The review after
+// each attempt shows the right answers, so an immediate retake would only test memory.
+export const LEVEL_RETAKE_DAYS = 7;
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+/** When the next attempt opens after an attempt made at `lastAttemptAt` (null if none). */
+export function levelRetakeAt(lastAttemptAt, days = LEVEL_RETAKE_DAYS) {
+  if (!lastAttemptAt) return null;
+  return new Date(new Date(lastAttemptAt).getTime() + days * DAY_MS);
+}
+
 export class ScoringError extends Error {
   constructor(message, details) {
     super(message);

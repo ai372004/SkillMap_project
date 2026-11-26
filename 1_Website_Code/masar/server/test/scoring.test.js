@@ -2,7 +2,15 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { TRACK_IDS, TRACK_QUIZ, getTrackContent } from '../src/content/index.js';
-import { explainTrack, levelFromPercent, scoreLevelTest, scoreTrackQuiz, ScoringError } from '../src/services/scoring.js';
+import {
+  LEVEL_RETAKE_DAYS,
+  explainTrack,
+  levelFromPercent,
+  levelRetakeAt,
+  scoreLevelTest,
+  scoreTrackQuiz,
+  ScoringError,
+} from '../src/services/scoring.js';
 
 // Picks, for every question, the option whose main track is `track`.
 function answersFor(track) {
@@ -115,4 +123,12 @@ test('every plan step has an id that is unique within its plan', () => {
       assert.equal(new Set(ids).size, ids.length, `${track} ${level}`);
     }
   }
+});
+
+test('a level test reopens LEVEL_RETAKE_DAYS after the last attempt', () => {
+  assert.equal(levelRetakeAt(null), null);
+  const at = '2026-11-10T09:00:00.000Z';
+  const reopens = levelRetakeAt(at);
+  assert.equal(reopens.getTime() - new Date(at).getTime(), LEVEL_RETAKE_DAYS * 24 * 60 * 60 * 1000);
+  assert.equal(levelRetakeAt(at, 3).toISOString(), '2026-11-13T09:00:00.000Z');
 });
