@@ -22,104 +22,6 @@
     U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
 }
 
-/* Room under the footer so the corner note never covers the last line on a phone. */
-@media (max-width: 640px) {
-  body {
-    padding-block-end: 64px;
-  }
-}
-
-/* The "demo version" note in the bottom corner. */
-.demo-note {
-  position: fixed;
-  z-index: 25;
-  inset-block-end: 16px;
-  inset-inline-start: 16px;
-  display: grid;
-  justify-items: start;
-  gap: 8px;
-  max-inline-size: min(340px, calc(100vw - 32px));
-  font-size: 0.9rem;
-}
-.demo-note__pill {
-  padding: 6px 14px;
-  border: 1px solid var(--rule-strong);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--ink);
-  font: inherit;
-  font-weight: 700;
-  box-shadow: var(--shadow);
-  cursor: pointer;
-}
-.demo-note__pill::before {
-  content: '';
-  display: inline-block;
-  inline-size: 8px;
-  block-size: 8px;
-  margin-inline-end: 8px;
-  border-radius: 50%;
-  background: var(--signal);
-  vertical-align: middle;
-}
-.demo-note__pill:focus-visible,
-.demo-note__reset:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 2px;
-}
-.demo-note__panel {
-  display: grid;
-  gap: 6px;
-  padding: 14px 16px;
-  border: 1px solid var(--rule);
-  border-radius: var(--r);
-  background: var(--surface);
-  color: var(--ink-2);
-  box-shadow: 0 12px 32px rgb(20 16 50 / 0.18);
-}
-.demo-note__panel[hidden] {
-  display: none;
-}
-.demo-note__panel p {
-  margin: 0;
-}
-.demo-note__title {
-  font-weight: 700;
-  color: var(--ink);
-}
-.demo-note__panel strong {
-  color: var(--ink);
-}
-.demo-note__cred {
-  display: inline-block;
-  white-space: pre;
-  unicode-bidi: isolate;
-  font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
-  font-size: 0.85rem;
-  color: var(--ink);
-}
-.demo-note__reset {
-  justify-self: start;
-  margin-block-start: 6px;
-  padding: 6px 12px;
-  border: 1px solid var(--primary);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--primary);
-  font: inherit;
-  font-weight: 600;
-  cursor: pointer;
-}
-:root[data-theme='dark'] .demo-note__reset {
-  border-color: var(--ink-2);
-  color: var(--ink);
-}
-@media print {
-  .demo-note {
-    display: none;
-  }
-}
-
 /* No-login demo: no account or sign-out links. */
 html[data-demo-guest] .topbar__nav a[href='#/account'],
 html[data-demo-guest] .topbar__nav .link-button {
@@ -150,7 +52,6 @@ html[data-demo-shapes] body svg * {
   color: var(--ink) !important;
   text-decoration-line: none !important;
 }
-html[data-demo-shapes] .demo-note,
 html[data-demo-shapes] .skip-link {
   display: none;
 }
