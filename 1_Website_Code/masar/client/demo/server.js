@@ -22,7 +22,7 @@ import { toCsv } from '../../server/src/utils/csv.js';
 import { seedDemo } from './seed.js';
 
 const VARIANT = [import.meta.env.VITE_DEMO_TRACKS, import.meta.env.VITE_DEMO_GUEST && 'guest'].filter(Boolean).join('.');
-const STORAGE_KEY = `masar.demo.db${VARIANT ? `.${VARIANT}` : ''}`;
+const STORAGE_KEY = `skillmap.demo.db${VARIANT ? `.${VARIANT}` : ''}`;
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 const SEEN_EVERY_MS = 60 * 60 * 1000;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

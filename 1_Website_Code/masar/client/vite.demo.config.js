@@ -1,6 +1,6 @@
 // Builds the offline demo: the whole app, an in-browser copy of the API and
 // sample data in ONE html file that opens with a double click (no server, no
-// database). Output: dist-demo/Masar_Demo.html.   npm run build:demo
+// database). Output: dist-demo/skillmap_Demo.html.   npm run build:demo
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
@@ -51,7 +51,7 @@ function singleFile() {
         delete bundle[file.fileName];
       }
       page.source = html;
-      page.fileName = 'Masar_Demo.html';
+      page.fileName = 'skillmap_Demo.html';
     },
   };
 }

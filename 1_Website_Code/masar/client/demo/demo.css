@@ -22,6 +22,13 @@
     U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
 }
 
+/* Room under the footer so the corner note never covers the last line on a phone. */
+@media (max-width: 640px) {
+  body {
+    padding-block-end: 64px;
+  }
+}
+
 /* The "demo version" note in the bottom corner. */
 .demo-note {
   position: fixed;

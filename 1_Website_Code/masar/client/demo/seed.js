@@ -5,13 +5,13 @@
 import { TRACK_IDS, TRACK_QUIZ, getTrackContent, isTrack } from './content.js';
 import { scoreLevelTest, scoreTrackQuiz } from '../../server/src/services/scoring.js';
 
-export const DEMO_ADMIN = { email: 'admin@masar.test', password: 'admin1234' };
+export const DEMO_ADMIN = { email: 'admin@skillmap.test', password: 'admin1234' };
 export const DEMO_STUDENT = { email: 'omar@example.com', password: 'student123' };
 
 // No-login demo (VITE_DEMO_GUEST=1): one visitor, already signed in, with no
 // other students. They have done the track quiz and level test so every page has content.
 export const GUEST_MODE = Boolean(import.meta.env.VITE_DEMO_GUEST);
-export const DEMO_GUEST = { email: 'visitor@masar.demo', password: 'visitor-demo' };
+export const DEMO_GUEST = { email: 'visitor@skillmap.demo', password: 'visitor-demo' };
 
 const DAY = 24 * 60 * 60 * 1000;
 const STAGES = ['registered', 'quiz', 'level', 'plan', 'submitted', 'revision', 'approved'];
